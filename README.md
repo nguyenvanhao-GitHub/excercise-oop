@@ -1,11 +1,11 @@
 # Tổng hợp 15 Bài Tập Lập Trình Hướng Đối Tượng (OOP) - Java
 
-Dự án này triển khai đầy đủ, chi tiết và chuẩn hóa toàn bộ 15 bài tập Lập trình hướng đối tượng (OOP) bằng ngôn ngữ Java, tuân thủ nghiêm ngặt các nguyên lý thiết kế OOP, xử lý Exception, và tổ chức code theo cấu trúc phân lớp rõ ràng.
+Dự án này triển khai đầy đủ, chi tiết và chuẩn hóa toàn bộ 15 bài tập Lập trình hướng đối tượng (OOP) bằng ngôn ngữ Java, tuân thủ nghiêm ngặt các nguyên lý thiết kế OOP, xử lý Exception, và tổ chức package theo tiền tố `oop_` tiếng Anh đồng bộ, trực quan và chuyên nghiệp.
 
 ---
 
 ## Mục lục
-- [1. Danh mục bài tập](#1-danh-mục-bài-tập)
+- [1. Danh mục bài tập & Package](#1-danh-mục-bài-tập--package)
 - [2. Cấu trúc thư mục nguồn](#2-cấu-trúc-thư-mục-nguồn)
 - [3. Hướng dẫn biên dịch và chạy](#3-hướng-dẫn-biên-dịch-và-chạy)
 - [4. Chi tiết lý thuyết & Thiết kế Bài 13 (Quản lý nhân viên)](#4-chi-tiết-lý-thuyết--thiết-kế-bài-13-quản-lý-nhân-viên)
@@ -14,22 +14,22 @@ Dự án này triển khai đầy đủ, chi tiết và chuẩn hóa toàn bộ 
 
 ---
 
-## 1. Danh mục bài tập
+## 1. Danh mục bài tập & Package
 
 | Bài | Tên bài toán | Gói (Package) | Mô tả chính |
 | :---: | :--- | :--- | :--- |
-| **Bài 1** | Quản lý cán bộ sản xuất | `b1` | Quản lý công nhân, kỹ sư, nhân viên kế thừa từ lớp `CanBo`. Tìm kiếm theo họ tên. |
-| **Bài 2** | Quản lý tài liệu thư viện | `b2` | Quản lý sách, tạp chí, báo kế thừa `TaiLieu`. Thêm, xóa theo mã, tìm theo loại. |
-| **Bài 3** | Quản lý tuyển sinh đại học | `b3` | Quản lý thí sinh dự thi khối A, B, C kế thừa `ThiSinh`. Tìm kiếm theo SBD. |
-| **Bài 4** | Quản lý khu phố & hộ dân | `b4` | Quản lý `Nguoi`, `HoGiaDinh`, `KhuPho`. Nhập n hộ dân, hiển thị thông tin chi tiết. |
-| **Bài 5** | Quản lý khách sạn | `b5` | Quản lý khách thuê phòng loại A ($500), B ($300), C ($100). Tính tiền theo CMND. |
-| **Bài 6** | Quản lý hồ sơ học sinh THPT | `b6` | Quản lý `HocSinh`. Lọc học sinh 20 tuổi, đếm học sinh 23 tuổi quê ở Đà Nẵng (DN). |
-| **Bài 7** | Quản lý lương cán bộ giáo viên | `b7` | Quản lý `Nguoi`, `CBGV`. Tính lương thực lĩnh = Lương cứng + Thưởng - Phạt. |
-| **Bài 8** | Quản lý mượn trả sách | `b8` | Quản lý `SinhVien`, `TheMuon`. Thêm, xóa theo mã phiếu mượn, hiển thị phiếu mượn. |
-| **Bài 9** | Quản lý biên lai tiền điện | `b9` | Quản lý `KhachHang`, `BienLai`. Tính tiền = (Chỉ số mới - cũ) * 5. Thêm/sửa/xóa. |
-| **Bài 10** | Xử lý văn bản | `b10` | Lớp `VanBan`: Đếm từ, đếm ký tự 'A'/'a', chuẩn hóa xâu (xóa khoảng trắng thừa). |
-| **Bài 11** | Lớp Số phức | `b11` | Lớp `SoPhuc`: Nhập, hiển thị dạng `a + bi`, phép cộng và nhân 2 số phức. |
-| **Bài 12** | Quản lý phương tiện giao thông | `b12` | Quản lý Ô tô, Xe máy, Xe tải kế thừa `PhuongTien`. Xóa theo ID, tìm theo hãng/màu. |
+| **Bài 1** | Quản lý cán bộ sản xuất | `oop_officer_management` | Quản lý công nhân, kỹ sư, nhân viên kế thừa từ lớp `CanBo`. Tìm kiếm theo họ tên. |
+| **Bài 2** | Quản lý tài liệu thư viện | `oop_document_management` | Quản lý sách, tạp chí, báo kế thừa `TaiLieu`. Thêm, xóa theo mã, tìm theo loại. |
+| **Bài 3** | Quản lý tuyển sinh đại học | `oop_admission_management` | Quản lý thí sinh dự thi khối A, B, C kế thừa `ThiSinh`. Tìm kiếm theo SBD. |
+| **Bài 4** | Quản lý khu phố & hộ dân | `oop_town_management` | Quản lý `Nguoi`, `HoGiaDinh`, `KhuPho`. Nhập n hộ dân, hiển thị thông tin chi tiết. |
+| **Bài 5** | Quản lý khách sạn | `oop_hotel_management` | Quản lý khách thuê phòng loại A ($500), B ($300), C ($100). Tính tiền theo CMND. |
+| **Bài 6** | Quản lý hồ sơ học sinh THPT | `oop_school_management` | Quản lý `HocSinh`. Lọc học sinh 20 tuổi, đếm học sinh 23 tuổi quê ở Đà Nẵng (DN). |
+| **Bài 7** | Quản lý lương cán bộ giáo viên | `oop_teacher_salary_management` | Quản lý `Nguoi`, `CBGV`. Tính lương thực lĩnh = Lương cứng + Thưởng - Phạt. |
+| **Bài 8** | Quản lý mượn trả sách | `oop_library_borrow_management` | Quản lý `SinhVien`, `TheMuon`. Thêm, xóa theo mã phiếu mượn, hiển thị phiếu mượn. |
+| **Bài 9** | Quản lý biên lai tiền điện | `oop_electricity_bill_management` | Quản lý `KhachHang`, `BienLai`. Tính tiền = (Chỉ số mới - cũ) * 5. Thêm/sửa/xóa. |
+| **Bài 10** | Xử lý văn bản | `oop_text_processing` | Lớp `VanBan`: Đếm từ, đếm ký tự 'A'/'a', chuẩn hóa xâu (xóa khoảng trắng thừa). |
+| **Bài 11** | Lớp Số phức | `oop_complex_number` | Lớp `SoPhuc`: Nhập, hiển thị dạng `a + bi`, phép cộng và nhân 2 số phức. |
+| **Bài 12** | Quản lý phương tiện giao thông | `oop_vehicle_management` | Quản lý Ô tô, Xe máy, Xe tải kế thừa `PhuongTien`. Xóa theo ID, tìm theo hãng/màu. |
 | **Bài 13** | Quản lý nhân viên công ty | `oop_employee_management` | Quản lý Experience, Fresher, Intern, Certificate. Áp dụng 4 tính chất OOP, custom exceptions, đọc/ghi file. |
 | **Bài 14** | Tuyển dụng sinh viên đại học | `oop_student_management` | Xếp hạng GoodStudent, NormalStudent. Xét tuyển 11-15 chỉ tiêu, validate Exception. |
 | **Bài 15** | Quản lý kết quả học tập SV | `oop_managing_academic_results` | Quản lý SV chính quy & tại chức, kết quả từng học kỳ, thống kê theo khoa/năm, Copy Constructor. |
@@ -40,65 +40,65 @@ Dự án này triển khai đầy đủ, chi tiết và chuẩn hóa toàn bộ 
 
 ```text
 src/
-├── b1/                             # Bài 1: Quản lý cán bộ
+├── oop_officer_management/         # Bài 1: Quản lý cán bộ sản xuất
 │   ├── CanBo.java
 │   ├── CongNhan.java
 │   ├── KySu.java
 │   ├── NhanVien.java
 │   ├── QLCB.java
 │   └── Main.java
-├── b2/                             # Bài 2: Quản lý tài liệu thư viện
+├── oop_document_management/        # Bài 2: Quản lý tài liệu thư viện
 │   ├── TaiLieu.java
 │   ├── Sach.java
 │   ├── TapChi.java
 │   ├── Bao.java
 │   ├── QuanLySach.java
 │   └── Main.java
-├── b3/                             # Bài 3: Tuyển sinh đại học
+├── oop_admission_management/       # Bài 3: Quản lý tuyển sinh đại học
 │   ├── ThiSinh.java
 │   ├── ThiSinhKhoiA.java
 │   ├── ThiSinhKhoiB.java
 │   ├── ThiSinhKhoiC.java
 │   ├── TuyenSinh.java
 │   └── Main.java
-├── b4/                             # Bài 4: Quản lý khu phố
+├── oop_town_management/            # Bài 4: Quản lý khu phố & hộ dân
 │   ├── Nguoi.java
 │   ├── HoGiaDinh.java
 │   ├── KhuPho.java
 │   └── Main.java
-├── b5/                             # Bài 5: Quản lý khách sạn
+├── oop_hotel_management/           # Bài 5: Quản lý khách sạn
 │   ├── Nguoi.java
 │   ├── Phong.java
 │   ├── PhongA.java, PhongB.java, PhongC.java
 │   ├── KhachThue.java
 │   ├── KhachSan.java
 │   └── Main.java
-├── b6/                             # Bài 6: Quản lý học sinh THPT
+├── oop_school_management/          # Bài 6: Quản lý học sinh THPT
 │   ├── HocSinh.java
 │   ├── QuanLyHocSinh.java
 │   └── Main.java
-├── b7/                             # Bài 7: Quản lý lương cán bộ giáo viên
+├── oop_teacher_salary_management/  # Bài 7: Quản lý lương cán bộ giáo viên
 │   ├── Nguoi.java
 │   ├── CBGV.java
 │   ├── QuanLyCBGV.java
 │   └── Main.java
-├── b8/                             # Bài 8: Quản lý thẻ mượn sách thư viện
+├── oop_library_borrow_management/  # Bài 8: Quản lý thẻ mượn sách thư viện
 │   ├── SinhVien.java
 │   ├── TheMuon.java
 │   ├── QuanLyTheMuon.java
 │   └── Main.java
-├── b9/                             # Bài 9: Biên lai tiền điện
+├── oop_electricity_bill_management/# Bài 9: Quản lý biên lai tiền điện
 │   ├── KhachHang.java
 │   ├── BienLai.java
 │   ├── QuanLyBienLai.java
 │   └── Main.java
-├── b10/                            # Bài 10: Xử lý văn bản
+├── oop_text_processing/            # Bài 10: Xử lý văn bản
 │   ├── VanBan.java
 │   └── Main.java
-├── b11/                            # Bài 11: Số phức
+├── oop_complex_number/             # Bài 11: Lớp Số phức
 │   ├── SoPhuc.java
 │   └── Main.java
-├── b12/                            # Bài 12: Quản lý phương tiện giao thông
+├── oop_vehicle_management/         # Bài 12: Quản lý phương tiện giao thông
 │   ├── PhuongTien.java
 │   ├── Oto.java
 │   ├── XeMay.java
@@ -123,7 +123,7 @@ src/
 │   ├── validator/EmployeeValidator.java
 │   ├── util/FileService.java
 │   └── Main.java
-├── oop_student_management/         # Bài 14: Quản lý tuyển dụng sinh viên tốt nghiệp
+├── oop_student_management/         # Bài 14: Tuyển dụng sinh viên tốt nghiệp
 │   ├── entity/
 │   │   ├── Student.java
 │   │   ├── GoodStudent.java
@@ -153,58 +153,55 @@ src/
 Mở terminal tại thư mục gốc của dự án (`d:\excercise-oop`) và chạy:
 
 ```bash
-# Tạo thư mục đầu ra nếu chưa có
-mkdir -p out/production/excercise-oop
-
 # Biên dịch tất cả file .java trong src
-javac -d out/production/excercise-oop src/b1/*.java src/b2/*.java src/b3/*.java src/b4/*.java src/b5/*.java src/b6/*.java src/b7/*.java src/b8/*.java src/b9/*.java src/b10/*.java src/b11/*.java src/b12/*.java src/oop_employee_management/**/*.java src/oop_student_management/**/*.java src/oop_managing_academic_results/*.java
+javac -d out/production/excercise-oop $(Get-ChildItem -Recurse src/*.java | Select-Object -ExpandProperty FullName)
 ```
 
 ### 3.2 Chạy từng bài tập
 ```bash
-# Bài 1
-java -cp out/production/excercise-oop b1.Main
+# Bài 1: Quản lý cán bộ
+java -cp out/production/excercise-oop oop_officer_management.Main
 
-# Bài 2
-java -cp out/production/excercise-oop b2.Main
+# Bài 2: Quản lý tài liệu thư viện
+java -cp out/production/excercise-oop oop_document_management.Main
 
-# Bài 3
-java -cp out/production/excercise-oop b3.Main
+# Bài 3: Tuyển sinh đại học
+java -cp out/production/excercise-oop oop_admission_management.Main
 
-# Bài 4
-java -cp out/production/excercise-oop b4.Main
+# Bài 4: Quản lý khu phố
+java -cp out/production/excercise-oop oop_town_management.Main
 
-# Bài 5
-java -cp out/production/excercise-oop b5.Main
+# Bài 5: Quản lý khách sạn
+java -cp out/production/excercise-oop oop_hotel_management.Main
 
-# Bài 6
-java -cp out/production/excercise-oop b6.Main
+# Bài 6: Quản lý học sinh THPT
+java -cp out/production/excercise-oop oop_school_management.Main
 
-# Bài 7
-java -cp out/production/excercise-oop b7.Main
+# Bài 7: Quản lý lương cán bộ giáo viên
+java -cp out/production/excercise-oop oop_teacher_salary_management.Main
 
-# Bài 8
-java -cp out/production/excercise-oop b8.Main
+# Bài 8: Quản lý mượn trả sách
+java -cp out/production/excercise-oop oop_library_borrow_management.Main
 
-# Bài 9
-java -cp out/production/excercise-oop b9.Main
+# Bài 9: Quản lý biên lai tiền điện
+java -cp out/production/excercise-oop oop_electricity_bill_management.Main
 
-# Bài 10
-java -cp out/production/excercise-oop b10.Main
+# Bài 10: Xử lý văn bản
+java -cp out/production/excercise-oop oop_text_processing.Main
 
-# Bài 11
-java -cp out/production/excercise-oop b11.Main
+# Bài 11: Số phức
+java -cp out/production/excercise-oop oop_complex_number.Main
 
-# Bài 12
-java -cp out/production/excercise-oop b12.Main
+# Bài 12: Quản lý phương tiện giao thông
+java -cp out/production/excercise-oop oop_vehicle_management.Main
 
-# Bài 13
+# Bài 13: Quản lý nhân viên công ty
 java -cp out/production/excercise-oop oop_employee_management.Main
 
-# Bài 14
+# Bài 14: Tuyển dụng sinh viên đại học
 java -cp out/production/excercise-oop oop_student_management.Main
 
-# Bài 15
+# Bài 15: Quản lý kết quả học tập sinh viên
 java -cp out/production/excercise-oop oop_managing_academic_results.Main
 ```
 
