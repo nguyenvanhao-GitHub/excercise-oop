@@ -4,15 +4,27 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
-public class InServiceStudent extends Student{
-    private String trainingPartnership;
+public class InServiceStudent extends Student {
+    private String trainingPartnership; // Nơi liên kết đào tạo
 
+    // 1. Constructor chuẩn (default)
     public InServiceStudent() {
+        super();
+        this.trainingPartnership = "";
     }
 
+    // 2. Constructor có tham số
     public InServiceStudent(String id, String fullName, LocalDate dateOfBirth, int yearOfAdmission, double entryPoint, List<AcademicResult> academicResults, String trainingPartnership) {
         super(id, fullName, dateOfBirth, yearOfAdmission, entryPoint, academicResults);
-        this.trainingPartnership = trainingPartnership;
+        setTrainingPartnership(trainingPartnership);
+    }
+
+    // 3. Constructor sao chép (copy constructor)
+    public InServiceStudent(InServiceStudent other) {
+        super(other);
+        if (other != null) {
+            this.trainingPartnership = other.trainingPartnership;
+        }
     }
 
     public String getTrainingPartnership() {
@@ -20,23 +32,34 @@ public class InServiceStudent extends Student{
     }
 
     public void setTrainingPartnership(String trainingPartnership) {
-        if (trainingPartnership == null || trainingPartnership.isEmpty()){
-            throw new IllegalArgumentException("Training partnership cannot be null or empty");
+        if (trainingPartnership == null || trainingPartnership.trim().isEmpty()) {
+            throw new IllegalArgumentException("Nơi liên kết đào tạo không được để trống!");
         }
-
-        this.trainingPartnership = trainingPartnership;
+        this.trainingPartnership = trainingPartnership.trim();
     }
 
     @Override
-    public void input(Scanner scanner){
+    public boolean isRegularStudent() {
+        return false;
+    }
+
+    @Override
+    public void input(Scanner scanner) {
         super.input(scanner);
-        System.out.println("Enter training partnership: ");
-        setTrainingPartnership(scanner.next());
+        System.out.print("Nhập nơi liên kết đào tạo (ví dụ: Đồng Nai, Cà Mau): ");
+        setTrainingPartnership(scanner.nextLine());
     }
 
     @Override
-    public void output(){
+    public void output() {
         super.output();
-        System.out.println("Training Partnership: " + trainingPartnership);
+        System.out.println("  Nơi liên kết đào tạo: " + trainingPartnership);
+    }
+
+    @Override
+    public String toString() {
+        return "InServiceStudent{" + super.toString() +
+                ", trainingPartnership='" + trainingPartnership + '\'' +
+                '}';
     }
 }
