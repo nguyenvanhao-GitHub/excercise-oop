@@ -13,7 +13,7 @@ public class QuanLySach {
 
     public boolean themTaiLieu(TaiLieu taiLieu) {
         if (taiLieu == null) return false;
-        // Kiá»ƒm tra mÃ£ tÃ i liá»‡u Ä‘Ã£ tá»“n táº¡i chÆ°a (mÃ£ tÃ i liá»‡u lÃ  duy nháº¥t)
+        // Kiểm tra mã tài liệu đã tồn tại chưa (mã tài liệu là duy nhất)
         boolean daTonTai = danhSachTaiLieu.stream()
                 .anyMatch(tl -> tl.getMaTaiLieu().equalsIgnoreCase(taiLieu.getMaTaiLieu()));
         if (daTonTai) {
@@ -30,10 +30,10 @@ public class QuanLySach {
 
     public void hienThiThongTin() {
         if (danhSachTaiLieu.isEmpty()) {
-            System.out.println("ThÆ° viá»‡n hiá»‡n chÆ°a cÃ³ tÃ i liá»‡u nÃ o.");
+            System.out.println("Thư viện hiện chưa có tài liệu nào.");
             return;
         }
-        System.out.println("----- DANH SÃCH TÃ€I LIá»†U (" + danhSachTaiLieu.size() + ") -----");
+        System.out.println("----- DANH SÁCH TÀI LIỆU (" + danhSachTaiLieu.size() + ") -----");
         for (int i = 0; i < danhSachTaiLieu.size(); i++) {
             System.out.println((i + 1) + ". " + danhSachTaiLieu.get(i));
         }

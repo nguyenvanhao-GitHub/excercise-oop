@@ -18,14 +18,14 @@ public class KhuPho {
 
     public void hienThiThongTin() {
         if (danhSachHoGiaDinh.isEmpty()) {
-            System.out.println("Khu phá»‘ hiá»‡n chÆ°a cÃ³ thÃ´ng tin há»™ gia Ä‘Ã¬nh nÃ o.");
+            System.out.println("Khu phố hiện chưa có thông tin hộ gia đình nào.");
             return;
         }
         System.out.println("==================================================");
-        System.out.println("     DANH SÃCH CÃC Há»˜ GIA ÄÃŒNH TRONG KHU PHá»      ");
+        System.out.println("     DANH SÁCH CÁC HỘ GIA ĐÌNH TRONG KHU PHỐ      ");
         System.out.println("==================================================");
         for (int i = 0; i < danhSachHoGiaDinh.size(); i++) {
-            System.out.println("[Há»˜ DÃ‚N " + (i + 1) + "]");
+            System.out.println("[HỘ DÂN " + (i + 1) + "]");
             System.out.print(danhSachHoGiaDinh.get(i));
         }
     }

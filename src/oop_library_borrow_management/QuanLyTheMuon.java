@@ -28,10 +28,10 @@ public class QuanLyTheMuon {
 
     public void hienThiDanhSach() {
         if (danhSachTheMuon.isEmpty()) {
-            System.out.println("ThÆ° viá»‡n hiá»‡n chÆ°a cÃ³ phiáº¿u mÆ°á»£n sÃ¡ch nÃ o.");
+            System.out.println("Thư viện hiện chưa có phiếu mượn sách nào.");
             return;
         }
-        System.out.println("----- DANH SÃCH THáºº MÆ¯á»¢N SÃCH (" + danhSachTheMuon.size() + ") -----");
+        System.out.println("----- DANH SÁCH THẺ MƯỢN SÁCH (" + danhSachTheMuon.size() + ") -----");
         for (int i = 0; i < danhSachTheMuon.size(); i++) {
             System.out.println((i + 1) + ". " + danhSachTheMuon.get(i));
         }

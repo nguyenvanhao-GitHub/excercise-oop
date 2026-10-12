@@ -53,10 +53,10 @@ public class HoGiaDinh {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Sá»‘ nhÃ : ").append(soNha)
-          .append(" | Sá»‘ thÃ nh viÃªn: ").append(soThanhVien).append("\n");
+        sb.append("Số nhà: ").append(soNha)
+          .append(" | Số thành viên: ").append(soThanhVien).append("\n");
         for (int i = 0; i < thanhVien.size(); i++) {
-            sb.append("   - ThÃ nh viÃªn ").append(i + 1).append(": ").append(thanhVien.get(i)).append("\n");
+            sb.append("   - Thành viên ").append(i + 1).append(": ").append(thanhVien.get(i)).append("\n");
         }
         return sb.toString();
     }

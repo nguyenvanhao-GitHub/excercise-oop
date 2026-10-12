@@ -21,6 +21,6 @@ public class NhanVien extends CanBo {
 
     @Override
     public String toString() {
-        return "NhÃ¢n ViÃªn Phá»¥c Vá»¥ [" + super.toString() + ", CÃ´ng viá»‡c: " + congViec + "]";
+        return "Nhân Viên Phục Vụ [" + super.toString() + ", Công việc: " + congViec + "]";
     }
 }

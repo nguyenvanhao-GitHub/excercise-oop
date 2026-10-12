@@ -9,13 +9,13 @@ public class Main {
     public static void main(String[] args) {
         int luaChon;
         do {
-            System.out.println("\n========== QUáº¢N LÃ BIÃŠN LAI THU TIá»€N ÄIá»†N (BÃ€I 9) ==========");
-            System.out.println("1. ThÃªm má»›i há»™ sá»­ dá»¥ng Ä‘iá»‡n & biÃªn lai");
-            System.out.println("2. Sá»­a thÃ´ng tin há»™ sá»­ dá»¥ng Ä‘iá»‡n theo mÃ£ cÃ´ng tÆ¡");
-            System.out.println("3. XÃ³a há»™ sá»­ dá»¥ng Ä‘iá»‡n theo mÃ£ cÃ´ng tÆ¡");
-            System.out.println("4. Hiá»ƒn thá»‹ danh sÃ¡ch biÃªn lai vÃ  sá»‘ tiá»n Ä‘iá»‡n pháº£i tráº£");
-            System.out.println("0. ThoÃ¡t khá»i chÆ°Æ¡ng trÃ¬nh");
-            System.out.print(">> Nháº­p lá»±a chá»n cá»§a báº¡n: ");
+            System.out.println("\n========== QUẢN LÝ BIÊN LAI THU TIỀN ĐIỆN (BÀI 9) ==========");
+            System.out.println("1. Thêm mới hộ sử dụng điện & biên lai");
+            System.out.println("2. Sửa thông tin hộ sử dụng điện theo mã công tơ");
+            System.out.println("3. Xóa hộ sử dụng điện theo mã công tơ");
+            System.out.println("4. Hiển thị danh sách biên lai và số tiền điện phải trả");
+            System.out.println("0. Thoát khỏi chương trình");
+            System.out.print(">> Nhập lựa chọn của bạn: ");
 
             try {
                 luaChon = Integer.parseInt(scanner.nextLine().trim());
@@ -37,47 +37,47 @@ public class Main {
                     qlbl.hienThiDanhSach();
                     break;
                 case 0:
-                    System.out.println("ÄÃ£ thoÃ¡t chÆ°Æ¡ng trÃ¬nh Quáº£n lÃ½ biÃªn lai Ä‘iá»‡n.");
+                    System.out.println("Đã thoát chương trình Quản lý biên lai điện.");
                     break;
                 default:
-                    System.out.println("Lá»±a chá»n khÃ´ng há»£p lá»‡, vui lÃ²ng chá»n láº¡i!");
+                    System.out.println("Lựa chọn không hợp lệ, vui lòng chọn lại!");
             }
         } while (luaChon != 0);
     }
 
     private static void themMoiBienLai() {
-        System.out.print("Nháº­p mÃ£ sá»‘ cÃ´ng tÆ¡ Ä‘iá»‡n: ");
+        System.out.print("Nhập mã số công tơ điện: ");
         String maCongTo = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p há» tÃªn chá»§ há»™: ");
+        System.out.print("Nhập họ tên chủ hộ: ");
         String chuHo = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p sá»‘ nhÃ : ");
+        System.out.print("Nhập số nhà: ");
         String soNha = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p chá»‰ sá»‘ Ä‘iá»‡n cÅ©: ");
+        System.out.print("Nhập chỉ số điện cũ: ");
         double chiSoCu;
         try {
             chiSoCu = Double.parseDouble(scanner.nextLine().trim());
             if (chiSoCu < 0) {
-                System.out.println("Chá»‰ sá»‘ Ä‘iá»‡n khÃ´ng Ä‘Æ°á»£c Ã¢m!");
+                System.out.println("Chỉ số điện không được âm!");
                 return;
             }
         } catch (NumberFormatException e) {
-            System.out.println("Chá»‰ sá»‘ Ä‘iá»‡n cÅ© pháº£i lÃ  sá»‘!");
+            System.out.println("Chỉ số điện cũ phải là số!");
             return;
         }
 
-        System.out.print("Nháº­p chá»‰ sá»‘ Ä‘iá»‡n má»›i: ");
+        System.out.print("Nhập chỉ số điện mới: ");
         double chiSoMoi;
         try {
             chiSoMoi = Double.parseDouble(scanner.nextLine().trim());
             if (chiSoMoi < chiSoCu) {
-                System.out.println("Chá»‰ sá»‘ Ä‘iá»‡n má»›i pháº£i lá»›n hÆ¡n hoáº·c báº±ng chá»‰ sá»‘ cÅ©!");
+                System.out.println("Chỉ số điện mới phải lớn hơn hoặc bằng chỉ số cũ!");
                 return;
             }
         } catch (NumberFormatException e) {
-            System.out.println("Chá»‰ sá»‘ Ä‘iá»‡n má»›i pháº£i lÃ  sá»‘!");
+            System.out.println("Chỉ số điện mới phải là số!");
             return;
         }
 
@@ -86,39 +86,39 @@ public class Main {
 
         boolean thanhCong = qlbl.themBienLai(bl);
         if (thanhCong) {
-            System.out.println(">> ThÃªm biÃªn lai thÃ nh cÃ´ng! Tiá»n Ä‘iá»‡n pháº£i tráº£: " +
-                    String.format("%,.2f", bl.tinhTienDien()) + " VNÄ");
+            System.out.println(">> Thêm biên lai thành công! Tiền điện phải trả: " +
+                    String.format("%,.2f", bl.tinhTienDien()) + " VNĐ");
         } else {
-            System.out.println(">> Tháº¥t báº¡i: MÃ£ cÃ´ng tÆ¡ '" + maCongTo + "' Ä‘Ã£ tá»“n táº¡i!");
+            System.out.println(">> Thất bại: Mã công tơ '" + maCongTo + "' đã tồn tại!");
         }
     }
 
     private static void suaThongTin() {
-        System.out.print("Nháº­p mÃ£ cÃ´ng tÆ¡ cáº§n sá»­a thÃ´ng tin: ");
+        System.out.print("Nhập mã công tơ cần sửa thông tin: ");
         String ma = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p há» tÃªn chá»§ há»™ má»›i (bá» trá»‘ng náº¿u khÃ´ng Ä‘á»•i): ");
+        System.out.print("Nhập họ tên chủ hộ mới (bỏ trống nếu không đổi): ");
         String tenMoi = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p sá»‘ nhÃ  má»›i (bá» trá»‘ng náº¿u khÃ´ng Ä‘á»•i): ");
+        System.out.print("Nhập số nhà mới (bỏ trống nếu không đổi): ");
         String soNhaMoi = scanner.nextLine().trim();
 
         boolean daSua = qlbl.suaThongTinKhachHang(ma, tenMoi, soNhaMoi);
         if (daSua) {
-            System.out.println(">> Sá»­a thÃ´ng tin thÃ nh cÃ´ng cho mÃ£ cÃ´ng tÆ¡: " + ma);
+            System.out.println(">> Sửa thông tin thành công cho mã công tơ: " + ma);
         } else {
-            System.out.println(">> KhÃ´ng tÃ¬m tháº¥y há»™ cÃ³ mÃ£ cÃ´ng tÆ¡: " + ma);
+            System.out.println(">> Không tìm thấy hộ có mã công tơ: " + ma);
         }
     }
 
     private static void xoaBienLai() {
-        System.out.print("Nháº­p mÃ£ cÃ´ng tÆ¡ cáº§n xÃ³a: ");
+        System.out.print("Nhập mã công tơ cần xóa: ");
         String ma = scanner.nextLine().trim();
         boolean daXoa = qlbl.xoaBienLai(ma);
         if (daXoa) {
-            System.out.println(">> ÄÃ£ xÃ³a biÃªn lai cÃ³ mÃ£ cÃ´ng tÆ¡: " + ma);
+            System.out.println(">> Đã xóa biên lai có mã công tơ: " + ma);
         } else {
-            System.out.println(">> KhÃ´ng tÃ¬m tháº¥y há»™ cÃ³ mÃ£ cÃ´ng tÆ¡: " + ma);
+            System.out.println(">> Không tìm thấy hộ có mã công tơ: " + ma);
         }
     }
 }

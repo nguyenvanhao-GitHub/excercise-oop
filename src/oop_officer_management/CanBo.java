@@ -50,9 +50,9 @@ public class CanBo {
 
     @Override
     public String toString() {
-        return "Há» tÃªn: " + hoTen +
-                ", Tuá»•i: " + tuoi +
-                ", Giá»›i tÃ­nh: " + gioiTinh +
-                ", Äá»‹a chá»‰: " + diaChi;
+        return "Họ tên: " + hoTen +
+                ", Tuổi: " + tuoi +
+                ", Giới tính: " + gioiTinh +
+                ", Địa chỉ: " + diaChi;
     }
 }

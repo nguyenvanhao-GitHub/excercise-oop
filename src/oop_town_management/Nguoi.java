@@ -4,7 +4,7 @@ public class Nguoi {
     private String hoTen;
     private int tuoi;
     private String ngheNghiep;
-    private String soCMND; // Duy nháº¥t cho má»—i ngÆ°á»i
+    private String soCMND; // Duy nhất cho mỗi người
 
     public Nguoi() {
     }
@@ -51,8 +51,8 @@ public class Nguoi {
     @Override
     public String toString() {
         return "CMND: " + soCMND +
-                ", Há» tÃªn: " + hoTen +
-                ", Tuá»•i: " + tuoi +
-                ", Nghá» nghiá»‡p: " + ngheNghiep;
+                ", Họ tên: " + hoTen +
+                ", Tuổi: " + tuoi +
+                ", Nghề nghiệp: " + ngheNghiep;
     }
 }

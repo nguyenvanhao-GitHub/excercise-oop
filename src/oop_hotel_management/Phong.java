@@ -30,6 +30,6 @@ public class Phong {
 
     @Override
     public String toString() {
-        return "Loáº¡i phÃ²ng: " + loaiPhong + ", GiÃ¡: " + giaPhong + "$/ngÃ y";
+        return "Loại phòng: " + loaiPhong + ", Giá: " + giaPhong + "$/ngày";
     }
 }

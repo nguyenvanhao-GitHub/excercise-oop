@@ -21,6 +21,6 @@ public class KySu extends CanBo {
 
     @Override
     public String toString() {
-        return "Ká»¹ SÆ° [" + super.toString() + ", NgÃ nh Ä‘Ã o táº¡o: " + nganhDaoTao + "]";
+        return "Kỹ Sư [" + super.toString() + ", Ngành đào tạo: " + nganhDaoTao + "]";
     }
 }

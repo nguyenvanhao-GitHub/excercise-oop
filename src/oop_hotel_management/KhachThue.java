@@ -45,6 +45,6 @@ public class KhachThue {
 
     @Override
     public String toString() {
-        return "KhÃ¡ch hÃ ng [" + nguoi + "] | " + phong + " | Sá»‘ ngÃ y thuÃª: " + soNgayThue + " | Tiá»n dá»± kiáº¿n: " + tinhTien() + "$";
+        return "Khách hàng [" + nguoi + "] | " + phong + " | Số ngày thuê: " + soNgayThue + " | Tiền dự kiến: " + tinhTien() + "$";
     }
 }

@@ -12,7 +12,7 @@ public class TuyenSinh {
 
     public boolean themThiSinh(ThiSinh thiSinh) {
         if (thiSinh == null) return false;
-        // Kiá»ƒm tra sá»‘ bÃ¡o danh duy nháº¥t
+        // Kiểm tra số báo danh duy nhất
         boolean tonTai = danhSachThiSinh.stream()
                 .anyMatch(ts -> ts.getSoBaoDanh().equalsIgnoreCase(thiSinh.getSoBaoDanh()));
         if (tonTai) {
@@ -24,10 +24,10 @@ public class TuyenSinh {
 
     public void hienThiThongTin() {
         if (danhSachThiSinh.isEmpty()) {
-            System.out.println("Danh sÃ¡ch thÃ­ sinh dá»± thi hiá»‡n Ä‘ang trá»‘ng.");
+            System.out.println("Danh sách thí sinh dự thi hiện đang trống.");
             return;
         }
-        System.out.println("----- DANH SÃCH THÃ SINH Dá»° THI Äáº I Há»ŒC (" + danhSachThiSinh.size() + ") -----");
+        System.out.println("----- DANH SÁCH THÍ SINH DỰ THI ĐẠI HỌC (" + danhSachThiSinh.size() + ") -----");
         for (int i = 0; i < danhSachThiSinh.size(); i++) {
             System.out.println((i + 1) + ". " + danhSachThiSinh.get(i));
         }

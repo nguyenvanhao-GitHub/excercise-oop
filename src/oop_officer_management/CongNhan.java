@@ -1,7 +1,7 @@
 package oop_officer_management;
 
 public class CongNhan extends CanBo {
-    private int bac; // Báº­c tá»« 1 Ä‘áº¿n 10
+    private int bac; // Bậc từ 1 đến 10
 
     public CongNhan() {
     }
@@ -21,6 +21,6 @@ public class CongNhan extends CanBo {
 
     @Override
     public String toString() {
-        return "CÃ´ng NhÃ¢n [" + super.toString() + ", Báº­c: " + bac + "/10]";
+        return "Công Nhân [" + super.toString() + ", Bậc: " + bac + "/10]";
     }
 }

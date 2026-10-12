@@ -40,6 +40,6 @@ public class Nguoi {
 
     @Override
     public String toString() {
-        return "CMND: " + soCMND + ", Há» tÃªn: " + hoTen + ", Tuá»•i: " + tuoi;
+        return "CMND: " + soCMND + ", Họ tên: " + hoTen + ", Tuổi: " + tuoi;
     }
 }

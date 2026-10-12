@@ -50,9 +50,9 @@ public class HocSinh {
 
     @Override
     public String toString() {
-        return "Há»c sinh [Há» tÃªn: " + hoTen +
-                ", Tuá»•i: " + tuoi +
-                ", QuÃª quÃ¡n: " + queQuan +
-                ", Lá»›p: " + lop + "]";
+        return "Học sinh [Họ tên: " + hoTen +
+                ", Tuổi: " + tuoi +
+                ", Quê quán: " + queQuan +
+                ", Lớp: " + lop + "]";
     }
 }

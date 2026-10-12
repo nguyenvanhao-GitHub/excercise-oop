@@ -19,10 +19,10 @@ public class QuanLyHocSinh {
 
     public void hienThiDanhSach() {
         if (danhSachHocSinh.isEmpty()) {
-            System.out.println("Danh sÃ¡ch há»c sinh hiá»‡n Ä‘ang trá»‘ng.");
+            System.out.println("Danh sách học sinh hiện đang trống.");
             return;
         }
-        System.out.println("----- Táº¤T Cáº¢ Há»ŒC SINH (" + danhSachHocSinh.size() + ") -----");
+        System.out.println("----- TẤT CẢ HỌC SINH (" + danhSachHocSinh.size() + ") -----");
         for (int i = 0; i < danhSachHocSinh.size(); i++) {
             System.out.println((i + 1) + ". " + danhSachHocSinh.get(i));
         }
@@ -38,7 +38,7 @@ public class QuanLyHocSinh {
         return danhSachHocSinh.stream()
                 .filter(hs -> hs.getTuoi() == 23 && (
                         hs.getQueQuan().equalsIgnoreCase("DN") ||
-                        hs.getQueQuan().equalsIgnoreCase("ÄÃ  Náºµng") ||
+                        hs.getQueQuan().equalsIgnoreCase("Đà Nẵng") ||
                         hs.getQueQuan().equalsIgnoreCase("Da Nang")
                 ))
                 .count();

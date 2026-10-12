@@ -10,13 +10,13 @@ public class Main {
     public static void main(String[] args) {
         int luaChon;
         do {
-            System.out.println("\n========== QUáº¢N LÃ TÃ€I LIá»†U THÆ¯ VIá»†N (BÃ€I 2) ==========");
-            System.out.println("1. ThÃªm má»›i tÃ i liá»‡u (SÃ¡ch, Táº¡p chÃ­, BÃ¡o)");
-            System.out.println("2. XÃ³a tÃ i liá»‡u theo mÃ£ tÃ i liá»‡u");
-            System.out.println("3. Hiá»ƒn thá»‹ thÃ´ng tin toÃ n bá»™ tÃ i liá»‡u");
-            System.out.println("4. TÃ¬m kiáº¿m tÃ i liá»‡u theo loáº¡i (SÃ¡ch, Táº¡p chÃ­, BÃ¡o)");
-            System.out.println("0. ThoÃ¡t khá»i chÆ°Æ¡ng trÃ¬nh");
-            System.out.print(">> Nháº­p lá»±a chá»n cá»§a báº¡n: ");
+            System.out.println("\n========== QUẢN LÝ TÀI LIỆU THƯ VIỆN (BÀI 2) ==========");
+            System.out.println("1. Thêm mới tài liệu (Sách, Tạp chí, Báo)");
+            System.out.println("2. Xóa tài liệu theo mã tài liệu");
+            System.out.println("3. Hiển thị thông tin toàn bộ tài liệu");
+            System.out.println("4. Tìm kiếm tài liệu theo loại (Sách, Tạp chí, Báo)");
+            System.out.println("0. Thoát khỏi chương trình");
+            System.out.print(">> Nhập lựa chọn của bạn: ");
 
             try {
                 luaChon = Integer.parseInt(scanner.nextLine().trim());
@@ -38,124 +38,124 @@ public class Main {
                     timKiemTaiLieuTheoLoai();
                     break;
                 case 0:
-                    System.out.println("ÄÃ£ thoÃ¡t chÆ°Æ¡ng trÃ¬nh Quáº£n lÃ½ tÃ i liá»‡u.");
+                    System.out.println("Đã thoát chương trình Quản lý tài liệu.");
                     break;
                 default:
-                    System.out.println("Lá»±a chá»n khÃ´ng há»£p lá»‡, vui lÃ²ng chá»n láº¡i!");
+                    System.out.println("Lựa chọn không hợp lệ, vui lòng chọn lại!");
             }
         } while (luaChon != 0);
     }
 
     private static void themMoiTaiLieu() {
-        System.out.println("\n--- Chá»n loáº¡i tÃ i liá»‡u cáº§n thÃªm ---");
-        System.out.println("1. SÃ¡ch");
-        System.out.println("2. Táº¡p chÃ­");
-        System.out.println("3. BÃ¡o");
-        System.out.print(">> Lá»±a chá»n: ");
+        System.out.println("\n--- Chọn loại tài liệu cần thêm ---");
+        System.out.println("1. Sách");
+        System.out.println("2. Tạp chí");
+        System.out.println("3. Báo");
+        System.out.print(">> Lựa chọn: ");
         int loai;
         try {
             loai = Integer.parseInt(scanner.nextLine().trim());
         } catch (NumberFormatException e) {
-            System.out.println("Lá»±a chá»n khÃ´ng há»£p lá»‡!");
+            System.out.println("Lựa chọn không hợp lệ!");
             return;
         }
 
-        System.out.print("Nháº­p mÃ£ tÃ i liá»‡u: ");
+        System.out.print("Nhập mã tài liệu: ");
         String maTL = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p tÃªn nhÃ  xuáº¥t báº£n: ");
+        System.out.print("Nhập tên nhà xuất bản: ");
         String nxb = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p sá»‘ báº£n phÃ¡t hÃ nh: ");
+        System.out.print("Nhập số bản phát hành: ");
         int soBan;
         try {
             soBan = Integer.parseInt(scanner.nextLine().trim());
         } catch (NumberFormatException e) {
-            System.out.println("Sá»‘ báº£n phÃ¡t hÃ nh pháº£i lÃ  sá»‘ nguyÃªn!");
+            System.out.println("Số bản phát hành phải là số nguyên!");
             return;
         }
 
         TaiLieu taiLieu;
         switch (loai) {
             case 1:
-                System.out.print("Nháº­p tÃªn tÃ¡c giáº£: ");
+                System.out.print("Nhập tên tác giả: ");
                 String tacGia = scanner.nextLine().trim();
-                System.out.print("Nháº­p sá»‘ trang: ");
+                System.out.print("Nhập số trang: ");
                 int soTrang;
                 try {
                     soTrang = Integer.parseInt(scanner.nextLine().trim());
                 } catch (NumberFormatException e) {
-                    System.out.println("Sá»‘ trang pháº£i lÃ  sá»‘ nguyÃªn!");
+                    System.out.println("Số trang phải là số nguyên!");
                     return;
                 }
                 taiLieu = new Sach(maTL, nxb, soBan, tacGia, soTrang);
                 break;
             case 2:
-                System.out.print("Nháº­p sá»‘ phÃ¡t hÃ nh: ");
+                System.out.print("Nhập số phát hành: ");
                 int soPhatHanh;
                 try {
                     soPhatHanh = Integer.parseInt(scanner.nextLine().trim());
                 } catch (NumberFormatException e) {
-                    System.out.println("Sá»‘ phÃ¡t hÃ nh pháº£i lÃ  sá»‘ nguyÃªn!");
+                    System.out.println("Số phát hành phải là số nguyên!");
                     return;
                 }
-                System.out.print("Nháº­p thÃ¡ng phÃ¡t hÃ nh (1 - 12): ");
+                System.out.print("Nhập tháng phát hành (1 - 12): ");
                 int thangPhatHanh;
                 try {
                     thangPhatHanh = Integer.parseInt(scanner.nextLine().trim());
                 } catch (NumberFormatException e) {
-                    System.out.println("ThÃ¡ng phÃ¡t hÃ nh pháº£i lÃ  sá»‘ nguyÃªn!");
+                    System.out.println("Tháng phát hành phải là số nguyên!");
                     return;
                 }
                 taiLieu = new TapChi(maTL, nxb, soBan, soPhatHanh, thangPhatHanh);
                 break;
             case 3:
-                System.out.print("Nháº­p ngÃ y phÃ¡t hÃ nh (1 - 31): ");
+                System.out.print("Nhập ngày phát hành (1 - 31): ");
                 int ngayPhatHanh;
                 try {
                     ngayPhatHanh = Integer.parseInt(scanner.nextLine().trim());
                 } catch (NumberFormatException e) {
-                    System.out.println("NgÃ y phÃ¡t hÃ nh pháº£i lÃ  sá»‘ nguyÃªn!");
+                    System.out.println("Ngày phát hành phải là số nguyên!");
                     return;
                 }
                 taiLieu = new Bao(maTL, nxb, soBan, ngayPhatHanh);
                 break;
             default:
-                System.out.println("Loáº¡i tÃ i liá»‡u khÃ´ng há»£p lá»‡!");
+                System.out.println("Loại tài liệu không hợp lệ!");
                 return;
         }
 
         boolean thanhCong = qls.themTaiLieu(taiLieu);
         if (thanhCong) {
-            System.out.println(">> ThÃªm má»›i tÃ i liá»‡u thÃ nh cÃ´ng!");
+            System.out.println(">> Thêm mới tài liệu thành công!");
         } else {
-            System.out.println(">> Tháº¥t báº¡i: MÃ£ tÃ i liá»‡u '" + maTL + "' Ä‘Ã£ tá»“n táº¡i trong há»‡ thá»‘ng!");
+            System.out.println(">> Thất bại: Mã tài liệu '" + maTL + "' đã tồn tại trong hệ thống!");
         }
     }
 
     private static void xoaTaiLieu() {
-        System.out.print("Nháº­p mÃ£ tÃ i liá»‡u cáº§n xÃ³a: ");
+        System.out.print("Nhập mã tài liệu cần xóa: ");
         String ma = scanner.nextLine().trim();
         boolean daXoa = qls.xoaTaiLieu(ma);
         if (daXoa) {
-            System.out.println(">> ÄÃ£ xÃ³a thÃ nh cÃ´ng tÃ i liá»‡u cÃ³ mÃ£: " + ma);
+            System.out.println(">> Đã xóa thành công tài liệu có mã: " + ma);
         } else {
-            System.out.println(">> KhÃ´ng tÃ¬m tháº¥y tÃ i liá»‡u cÃ³ mÃ£: " + ma);
+            System.out.println(">> Không tìm thấy tài liệu có mã: " + ma);
         }
     }
 
     private static void timKiemTaiLieuTheoLoai() {
-        System.out.println("Chá»n loáº¡i tÃ i liá»‡u cáº§n tÃ¬m:");
-        System.out.println("1. SÃ¡ch");
-        System.out.println("2. Táº¡p chÃ­");
-        System.out.println("3. BÃ¡o");
-        System.out.print(">> Lá»±a chá»n (1/2/3 hoáº·c tÃªn loáº¡i): ");
+        System.out.println("Chọn loại tài liệu cần tìm:");
+        System.out.println("1. Sách");
+        System.out.println("2. Tạp chí");
+        System.out.println("3. Báo");
+        System.out.print(">> Lựa chọn (1/2/3 hoặc tên loại): ");
         String loai = scanner.nextLine().trim();
         List<TaiLieu> ketQua = qls.timKiemTheoLoai(loai);
         if (ketQua.isEmpty()) {
-            System.out.println("KhÃ´ng cÃ³ tÃ i liá»‡u nÃ o thuá»™c loáº¡i Ä‘Ã£ chá»n.");
+            System.out.println("Không có tài liệu nào thuộc loại đã chọn.");
         } else {
-            System.out.println("--- Káº¾T QUáº¢ TÃŒM KIáº¾M (" + ketQua.size() + ") ---");
+            System.out.println("--- KẾT QUẢ TÌM KIẾM (" + ketQua.size() + ") ---");
             for (TaiLieu tl : ketQua) {
                 System.out.println(tl);
             }

@@ -21,7 +21,7 @@ public class Bao extends TaiLieu {
 
     @Override
     public String toString() {
-        return "BÃ¡o [" + super.toString() +
-                ", NgÃ y phÃ¡t hÃ nh: " + ngayPhatHanh + "]";
+        return "Báo [" + super.toString() +
+                ", Ngày phát hành: " + ngayPhatHanh + "]";
     }
 }

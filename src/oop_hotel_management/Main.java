@@ -9,13 +9,13 @@ public class Main {
     public static void main(String[] args) {
         int luaChon;
         do {
-            System.out.println("\n========== QUáº¢N LÃ KHÃCH Sáº N (BÃ€I 5) ==========");
-            System.out.println("1. ThÃªm má»›i khÃ¡ch thuÃª phÃ²ng");
-            System.out.println("2. XÃ³a khÃ¡ch thuÃª theo sá»‘ CMND");
-            System.out.println("3. TÃ­nh tiá»n thuÃª phÃ²ng theo sá»‘ CMND");
-            System.out.println("4. Hiá»ƒn thá»‹ danh sÃ¡ch khÃ¡ch thuÃª phÃ²ng");
-            System.out.println("0. ThoÃ¡t khá»i chÆ°Æ¡ng trÃ¬nh");
-            System.out.print(">> Nháº­p lá»±a chá»n cá»§a báº¡n: ");
+            System.out.println("\n========== QUẢN LÝ KHÁCH SẠN (BÀI 5) ==========");
+            System.out.println("1. Thêm mới khách thuê phòng");
+            System.out.println("2. Xóa khách thuê theo số CMND");
+            System.out.println("3. Tính tiền thuê phòng theo số CMND");
+            System.out.println("4. Hiển thị danh sách khách thuê phòng");
+            System.out.println("0. Thoát khỏi chương trình");
+            System.out.print(">> Nhập lựa chọn của bạn: ");
 
             try {
                 luaChon = Integer.parseInt(scanner.nextLine().trim());
@@ -37,35 +37,35 @@ public class Main {
                     khachSan.hienThiDanhSach();
                     break;
                 case 0:
-                    System.out.println("ÄÃ£ thoÃ¡t chÆ°Æ¡ng trÃ¬nh Quáº£n lÃ½ khÃ¡ch sáº¡n.");
+                    System.out.println("Đã thoát chương trình Quản lý khách sạn.");
                     break;
                 default:
-                    System.out.println("Lá»±a chá»n khÃ´ng há»£p lá»‡, vui lÃ²ng chá»n láº¡i!");
+                    System.out.println("Lựa chọn không hợp lệ, vui lòng chọn lại!");
             }
         } while (luaChon != 0);
     }
 
     private static void themMoiKhachThue() {
-        System.out.print("Nháº­p há» tÃªn khÃ¡ch hÃ ng: ");
+        System.out.print("Nhập họ tên khách hàng: ");
         String hoTen = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p tuá»•i: ");
+        System.out.print("Nhập tuổi: ");
         int tuoi;
         try {
             tuoi = Integer.parseInt(scanner.nextLine().trim());
         } catch (NumberFormatException e) {
-            System.out.println("Tuá»•i pháº£i lÃ  sá»‘ nguyÃªn!");
+            System.out.println("Tuổi phải là số nguyên!");
             return;
         }
 
-        System.out.print("Nháº­p sá»‘ CMND: ");
+        System.out.print("Nhập số CMND: ");
         String cmnd = scanner.nextLine().trim();
 
-        System.out.println("Chá»n loáº¡i phÃ²ng thuÃª:");
-        System.out.println("1. Loáº¡i A (500$/ngÃ y)");
-        System.out.println("2. Loáº¡i B (300$/ngÃ y)");
-        System.out.println("3. Loáº¡i C (100$/ngÃ y)");
-        System.out.print(">> Chá»n loáº¡i phÃ²ng (1/2/3 hoáº·c A/B/C): ");
+        System.out.println("Chọn loại phòng thuê:");
+        System.out.println("1. Loại A (500$/ngày)");
+        System.out.println("2. Loại B (300$/ngày)");
+        System.out.println("3. Loại C (100$/ngày)");
+        System.out.print(">> Chọn loại phòng (1/2/3 hoặc A/B/C): ");
         String chonPhong = scanner.nextLine().trim().toUpperCase();
 
         Phong phong;
@@ -76,20 +76,20 @@ public class Main {
         } else if (chonPhong.equals("3") || chonPhong.equals("C")) {
             phong = new PhongC();
         } else {
-            System.out.println("Loáº¡i phÃ²ng khÃ´ng há»£p lá»‡!");
+            System.out.println("Loại phòng không hợp lệ!");
             return;
         }
 
-        System.out.print("Nháº­p sá»‘ ngÃ y thuÃª: ");
+        System.out.print("Nhập số ngày thuê: ");
         int soNgay;
         try {
             soNgay = Integer.parseInt(scanner.nextLine().trim());
             if (soNgay <= 0) {
-                System.out.println("Sá»‘ ngÃ y thuÃª pháº£i lá»›n hÆ¡n 0!");
+                System.out.println("Số ngày thuê phải lớn hơn 0!");
                 return;
             }
         } catch (NumberFormatException e) {
-            System.out.println("Sá»‘ ngÃ y thuÃª pháº£i lÃ  sá»‘ nguyÃªn!");
+            System.out.println("Số ngày thuê phải là số nguyên!");
             return;
         }
 
@@ -98,31 +98,31 @@ public class Main {
 
         boolean thanhCong = khachSan.themKhachThue(khachThue);
         if (thanhCong) {
-            System.out.println(">> ThÃªm má»›i khÃ¡ch thuÃª thÃ nh cÃ´ng!");
+            System.out.println(">> Thêm mới khách thuê thành công!");
         } else {
-            System.out.println(">> Tháº¥t báº¡i: KhÃ¡ch hÃ ng vá»›i sá»‘ CMND '" + cmnd + "' Ä‘ang thuÃª phÃ²ng!");
+            System.out.println(">> Thất bại: Khách hàng với số CMND '" + cmnd + "' đang thuê phòng!");
         }
     }
 
     private static void xoaKhachThue() {
-        System.out.print("Nháº­p sá»‘ CMND khÃ¡ch cáº§n tráº£ phÃ²ng/xÃ³a: ");
+        System.out.print("Nhập số CMND khách cần trả phòng/xóa: ");
         String cmnd = scanner.nextLine().trim();
         boolean daXoa = khachSan.xoaKhachThue(cmnd);
         if (daXoa) {
-            System.out.println(">> ÄÃ£ xÃ³a khÃ¡ch hÃ ng cÃ³ sá»‘ CMND: " + cmnd);
+            System.out.println(">> Đã xóa khách hàng có số CMND: " + cmnd);
         } else {
-            System.out.println(">> KhÃ´ng tÃ¬m tháº¥y khÃ¡ch hÃ ng cÃ³ sá»‘ CMND: " + cmnd);
+            System.out.println(">> Không tìm thấy khách hàng có số CMND: " + cmnd);
         }
     }
 
     private static void tinhTienThue() {
-        System.out.print("Nháº­p sá»‘ CMND cá»§a khÃ¡ch Ä‘á»ƒ thanh toÃ¡n: ");
+        System.out.print("Nhập số CMND của khách để thanh toán: ");
         String cmnd = scanner.nextLine().trim();
         Double tongTien = khachSan.tinhTienThuePhong(cmnd);
         if (tongTien != null) {
-            System.out.println(">> Tá»•ng tiá»n thuÃª phÃ²ng cá»§a khÃ¡ch hÃ ng [CMND: " + cmnd + "] lÃ : " + tongTien + " $");
+            System.out.println(">> Tổng tiền thuê phòng của khách hàng [CMND: " + cmnd + "] là: " + tongTien + " $");
         } else {
-            System.out.println(">> KhÃ´ng tÃ¬m tháº¥y khÃ¡ch hÃ ng cÃ³ sá»‘ CMND: " + cmnd);
+            System.out.println(">> Không tìm thấy khách hàng có số CMND: " + cmnd);
         }
     }
 }

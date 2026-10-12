@@ -31,8 +31,8 @@ public class TapChi extends TaiLieu {
 
     @Override
     public String toString() {
-        return "Táº¡p ChÃ­ [" + super.toString() +
-                ", Sá»‘ phÃ¡t hÃ nh: " + soPhatHanh +
-                ", ThÃ¡ng phÃ¡t hÃ nh: " + thangPhatHanh + "]";
+        return "Tạp Chí [" + super.toString() +
+                ", Số phát hành: " + soPhatHanh +
+                ", Tháng phát hành: " + thangPhatHanh + "]";
     }
 }

@@ -51,8 +51,8 @@ public class ThiSinh {
     @Override
     public String toString() {
         return "SBD: " + soBaoDanh +
-                ", Há» tÃªn: " + hoTen +
-                ", Äá»‹a chá»‰: " + diaChi +
-                ", Má»©c Æ°u tiÃªn: " + mucUuTien;
+                ", Họ tên: " + hoTen +
+                ", Địa chỉ: " + diaChi +
+                ", Mức ưu tiên: " + mucUuTien;
     }
 }

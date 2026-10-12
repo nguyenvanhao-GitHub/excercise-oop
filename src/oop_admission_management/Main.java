@@ -9,12 +9,12 @@ public class Main {
     public static void main(String[] args) {
         int luaChon;
         do {
-            System.out.println("\n========== QUáº¢N LÃ TUYá»‚N SINH Äáº I Há»ŒC (BÃ€I 3) ==========");
-            System.out.println("1. ThÃªm má»›i thÃ­ sinh (Khá»‘i A, Khá»‘i B, Khá»‘i C)");
-            System.out.println("2. Hiá»ƒn thá»‹ thÃ´ng tin vÃ  khá»‘i thi cá»§a thÃ­ sinh");
-            System.out.println("3. TÃ¬m kiáº¿m thÃ­ sinh theo sá»‘ bÃ¡o danh");
-            System.out.println("0. ThoÃ¡t khá»i chÆ°Æ¡ng trÃ¬nh");
-            System.out.print(">> Nháº­p lá»±a chá»n cá»§a báº¡n: ");
+            System.out.println("\n========== QUẢN LÝ TUYỂN SINH ĐẠI HỌC (BÀI 3) ==========");
+            System.out.println("1. Thêm mới thí sinh (Khối A, Khối B, Khối C)");
+            System.out.println("2. Hiển thị thông tin và khối thi của thí sinh");
+            System.out.println("3. Tìm kiếm thí sinh theo số báo danh");
+            System.out.println("0. Thoát khỏi chương trình");
+            System.out.print(">> Nhập lựa chọn của bạn: ");
 
             try {
                 luaChon = Integer.parseInt(scanner.nextLine().trim());
@@ -33,43 +33,43 @@ public class Main {
                     timKiemThiSinh();
                     break;
                 case 0:
-                    System.out.println("ÄÃ£ thoÃ¡t chÆ°Æ¡ng trÃ¬nh Quáº£n lÃ½ tuyá»ƒn sinh.");
+                    System.out.println("Đã thoát chương trình Quản lý tuyển sinh.");
                     break;
                 default:
-                    System.out.println("Lá»±a chá»n khÃ´ng há»£p lá»‡, vui lÃ²ng chá»n láº¡i!");
+                    System.out.println("Lựa chọn không hợp lệ, vui lòng chọn lại!");
             }
         } while (luaChon != 0);
     }
 
     private static void themMoiThiSinh() {
-        System.out.println("\n--- Chá»n khá»‘i thi ---");
-        System.out.println("1. Khá»‘i A (ToÃ¡n, LÃ½, HoÃ¡)");
-        System.out.println("2. Khá»‘i B (ToÃ¡n, HoÃ¡, Sinh)");
-        System.out.println("3. Khá»‘i C (VÄƒn, Sá»­, Äá»‹a)");
-        System.out.print(">> Lá»±a chá»n: ");
+        System.out.println("\n--- Chọn khối thi ---");
+        System.out.println("1. Khối A (Toán, Lý, Hoá)");
+        System.out.println("2. Khối B (Toán, Hoá, Sinh)");
+        System.out.println("3. Khối C (Văn, Sử, Địa)");
+        System.out.print(">> Lựa chọn: ");
         int loai;
         try {
             loai = Integer.parseInt(scanner.nextLine().trim());
         } catch (NumberFormatException e) {
-            System.out.println("Lá»±a chá»n khÃ´ng há»£p lá»‡!");
+            System.out.println("Lựa chọn không hợp lệ!");
             return;
         }
 
-        System.out.print("Nháº­p sá»‘ bÃ¡o danh: ");
+        System.out.print("Nhập số báo danh: ");
         String sbd = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p há» tÃªn: ");
+        System.out.print("Nhập họ tên: ");
         String hoTen = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p Ä‘á»‹a chá»‰: ");
+        System.out.print("Nhập địa chỉ: ");
         String diaChi = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p má»©c Æ°u tiÃªn: ");
+        System.out.print("Nhập mức ưu tiên: ");
         int mucUuTien;
         try {
             mucUuTien = Integer.parseInt(scanner.nextLine().trim());
         } catch (NumberFormatException e) {
-            System.out.println("Má»©c Æ°u tiÃªn pháº£i lÃ  sá»‘ nguyÃªn!");
+            System.out.println("Mức ưu tiên phải là số nguyên!");
             return;
         }
 
@@ -85,27 +85,27 @@ public class Main {
                 thiSinh = new ThiSinhKhoiC(sbd, hoTen, diaChi, mucUuTien);
                 break;
             default:
-                System.out.println("Khá»‘i thi khÃ´ng há»£p lá»‡!");
+                System.out.println("Khối thi không hợp lệ!");
                 return;
         }
 
         boolean thanhCong = tuyenSinh.themThiSinh(thiSinh);
         if (thanhCong) {
-            System.out.println(">> ThÃªm má»›i thÃ­ sinh thÃ nh cÃ´ng!");
+            System.out.println(">> Thêm mới thí sinh thành công!");
         } else {
-            System.out.println(">> Tháº¥t báº¡i: Sá»‘ bÃ¡o danh '" + sbd + "' Ä‘Ã£ tá»“n táº¡i!");
+            System.out.println(">> Thất bại: Số báo danh '" + sbd + "' đã tồn tại!");
         }
     }
 
     private static void timKiemThiSinh() {
-        System.out.print("Nháº­p sá»‘ bÃ¡o danh cáº§n tÃ¬m: ");
+        System.out.print("Nhập số báo danh cần tìm: ");
         String sbd = scanner.nextLine().trim();
         ThiSinh thiSinh = tuyenSinh.timKiemTheoSoBaoDanh(sbd);
         if (thiSinh != null) {
-            System.out.println(">> ÄÃ£ tÃ¬m tháº¥y thÃ­ sinh:");
+            System.out.println(">> Đã tìm thấy thí sinh:");
             System.out.println(thiSinh);
         } else {
-            System.out.println(">> KhÃ´ng tÃ¬m tháº¥y thÃ­ sinh cÃ³ sá»‘ bÃ¡o danh: " + sbd);
+            System.out.println(">> Không tìm thấy thí sinh có số báo danh: " + sbd);
         }
     }
 }

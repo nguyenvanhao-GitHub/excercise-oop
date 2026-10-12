@@ -29,10 +29,10 @@ public class QLCB {
 
     public void hienThiDanhSach() {
         if (this.danhSachCanBo.isEmpty()) {
-            System.out.println("Danh sÃ¡ch cÃ¡n bá»™ hiá»‡n Ä‘ang trá»‘ng.");
+            System.out.println("Danh sách cán bộ hiện đang trống.");
             return;
         }
-        System.out.println("----- DANH SÃCH CÃN Bá»˜ (" + danhSachCanBo.size() + ") -----");
+        System.out.println("----- DANH SÁCH CÁN BỘ (" + danhSachCanBo.size() + ") -----");
         for (int i = 0; i < this.danhSachCanBo.size(); i++) {
             System.out.println((i + 1) + ". " + this.danhSachCanBo.get(i));
         }

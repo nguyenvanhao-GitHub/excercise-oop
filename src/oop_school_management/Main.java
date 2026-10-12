@@ -10,13 +10,13 @@ public class Main {
     public static void main(String[] args) {
         int luaChon;
         do {
-            System.out.println("\n========== QUáº¢N LÃ Há»’ SÆ  Há»ŒC SINH THPT (BÃ€I 6) ==========");
-            System.out.println("1. ThÃªm há»c sinh má»›i");
-            System.out.println("2. Hiá»ƒn thá»‹ toÃ n bá»™ danh sÃ¡ch há»c sinh");
-            System.out.println("3. Hiá»ƒn thá»‹ cÃ¡c há»c sinh 20 tuá»•i");
-            System.out.println("4. Äáº¿m sá»‘ lÆ°á»£ng há»c sinh 23 tuá»•i vÃ  quÃª á»Ÿ DN");
-            System.out.println("0. ThoÃ¡t khá»i chÆ°Æ¡ng trÃ¬nh");
-            System.out.print(">> Nháº­p lá»±a chá»n cá»§a báº¡n: ");
+            System.out.println("\n========== QUẢN LÝ HỒ SƠ HỌC SINH THPT (BÀI 6) ==========");
+            System.out.println("1. Thêm học sinh mới");
+            System.out.println("2. Hiển thị toàn bộ danh sách học sinh");
+            System.out.println("3. Hiển thị các học sinh 20 tuổi");
+            System.out.println("4. Đếm số lượng học sinh 23 tuổi và quê ở DN");
+            System.out.println("0. Thoát khỏi chương trình");
+            System.out.print(">> Nhập lựa chọn của bạn: ");
 
             try {
                 luaChon = Integer.parseInt(scanner.nextLine().trim());
@@ -38,47 +38,47 @@ public class Main {
                     demHocSinh23TuoiDN();
                     break;
                 case 0:
-                    System.out.println("ÄÃ£ thoÃ¡t chÆ°Æ¡ng trÃ¬nh Quáº£n lÃ½ há»c sinh.");
+                    System.out.println("Đã thoát chương trình Quản lý học sinh.");
                     break;
                 default:
-                    System.out.println("Lá»±a chá»n khÃ´ng há»£p lá»‡, vui lÃ²ng chá»n láº¡i!");
+                    System.out.println("Lựa chọn không hợp lệ, vui lòng chọn lại!");
             }
         } while (luaChon != 0);
     }
 
     private static void themHocSinhMoi() {
-        System.out.print("Nháº­p há» tÃªn há»c sinh: ");
+        System.out.print("Nhập họ tên học sinh: ");
         String hoTen = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p tuá»•i: ");
+        System.out.print("Nhập tuổi: ");
         int tuoi;
         try {
             tuoi = Integer.parseInt(scanner.nextLine().trim());
             if (tuoi <= 0) {
-                System.out.println("Tuá»•i pháº£i lá»›n hÆ¡n 0!");
+                System.out.println("Tuổi phải lớn hơn 0!");
                 return;
             }
         } catch (NumberFormatException e) {
-            System.out.println("Tuá»•i pháº£i lÃ  sá»‘ nguyÃªn!");
+            System.out.println("Tuổi phải là số nguyên!");
             return;
         }
 
-        System.out.print("Nháº­p quÃª quÃ¡n: ");
+        System.out.print("Nhập quê quán: ");
         String queQuan = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p lá»›p: ");
+        System.out.print("Nhập lớp: ");
         String lop = scanner.nextLine().trim();
 
         qlhs.themHocSinh(new HocSinh(hoTen, tuoi, queQuan, lop));
-        System.out.println(">> ThÃªm há»c sinh thÃ nh cÃ´ng!");
+        System.out.println(">> Thêm học sinh thành công!");
     }
 
     private static void hienThiHocSinh20Tuoi() {
         List<HocSinh> ds20 = qlhs.timHocSinh20Tuoi();
         if (ds20.isEmpty()) {
-            System.out.println("KhÃ´ng cÃ³ há»c sinh nÃ o 20 tuá»•i.");
+            System.out.println("Không có học sinh nào 20 tuổi.");
         } else {
-            System.out.println("----- DANH SÃCH Há»ŒC SINH 20 TUá»”I (" + ds20.size() + ") -----");
+            System.out.println("----- DANH SÁCH HỌC SINH 20 TUỔI (" + ds20.size() + ") -----");
             for (HocSinh hs : ds20) {
                 System.out.println(hs);
             }
@@ -87,6 +87,6 @@ public class Main {
 
     private static void demHocSinh23TuoiDN() {
         long dem = qlhs.demHocSinh23TuoiQueDN();
-        System.out.println(">> Sá»‘ lÆ°á»£ng há»c sinh 23 tuá»•i vÃ  cÃ³ quÃª á»Ÿ DN (ÄÃ  Náºµng): " + dem);
+        System.out.println(">> Số lượng học sinh 23 tuổi và có quê ở DN (Đà Nẵng): " + dem);
     }
 }

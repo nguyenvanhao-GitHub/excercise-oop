@@ -40,8 +40,8 @@ public class TaiLieu {
 
     @Override
     public String toString() {
-        return "MÃ£ TL: " + maTaiLieu +
+        return "Mã TL: " + maTaiLieu +
                 ", NXB: " + tenNXB +
-                ", Sá»‘ báº£n phÃ¡t hÃ nh: " + soBanPhatHanh;
+                ", Số bản phát hành: " + soBanPhatHanh;
     }
 }

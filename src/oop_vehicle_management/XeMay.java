@@ -21,7 +21,7 @@ public class XeMay extends PhuongTien {
 
     @Override
     public String toString() {
-        return "Xe mÃ¡y [" + super.toString() +
-                ", CÃ´ng suáº¥t: " + congXuat + " HP]";
+        return "Xe máy [" + super.toString() +
+                ", Công suất: " + congXuat + " HP]";
     }
 }

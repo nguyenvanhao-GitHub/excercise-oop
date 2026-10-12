@@ -44,10 +44,10 @@ public class QuanLyBienLai {
 
     public void hienThiDanhSach() {
         if (danhSachBienLai.isEmpty()) {
-            System.out.println("Há»‡ thá»‘ng hiá»‡n chÆ°a cÃ³ thÃ´ng tin biÃªn lai nÃ o.");
+            System.out.println("Hệ thống hiện chưa có thông tin biên lai nào.");
             return;
         }
-        System.out.println("----- DANH SÃCH BIÃŠN LAI THU TIá»€N ÄIá»†N (" + danhSachBienLai.size() + ") -----");
+        System.out.println("----- DANH SÁCH BIÊN LAI THU TIỀN ĐIỆN (" + danhSachBienLai.size() + ") -----");
         for (int i = 0; i < danhSachBienLai.size(); i++) {
             System.out.println((i + 1) + ". " + danhSachBienLai.get(i));
         }

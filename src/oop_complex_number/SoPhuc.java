@@ -6,7 +6,7 @@ public class SoPhuc {
     private double phanThuc;
     private double phanAo;
 
-    // YÃªu cáº§u 1: PhÆ°Æ¡ng thá»©c táº¡o láº­p
+    // Yêu cầu 1: Phương thức tạo lập
     public SoPhuc() {
         this.phanThuc = 0;
         this.phanAo = 0;
@@ -33,20 +33,20 @@ public class SoPhuc {
         this.phanAo = phanAo;
     }
 
-    // YÃªu cáº§u 2: Nháº­p má»™t sá»‘ phá»©c
+    // Yêu cầu 2: Nhập một số phức
     public void nhap(Scanner scanner) {
-        System.out.print("  Nháº­p pháº§n thá»±c: ");
+        System.out.print("  Nhập phần thực: ");
         this.phanThuc = Double.parseDouble(scanner.nextLine().trim());
-        System.out.print("  Nháº­p pháº§n áº£o: ");
+        System.out.print("  Nhập phần ảo: ");
         this.phanAo = Double.parseDouble(scanner.nextLine().trim());
     }
 
-    // YÃªu cáº§u 2: Hiá»ƒn thá»‹ sá»‘ phá»©c
+    // Yêu cầu 2: Hiển thị số phức
     public void hienThi() {
         System.out.println(this.toString());
     }
 
-    // YÃªu cáº§u 2: Cá»™ng 2 sá»‘ phá»©c: (a + bi) + (c + di) = (a + c) + (b + d)i
+    // Yêu cầu 2: Cộng 2 số phức: (a + bi) + (c + di) = (a + c) + (b + d)i
     public SoPhuc cong(SoPhuc sp2) {
         if (sp2 == null) return this;
         double thuc = this.phanThuc + sp2.phanThuc;
@@ -54,7 +54,7 @@ public class SoPhuc {
         return new SoPhuc(thuc, ao);
     }
 
-    // YÃªu cáº§u 2: NhÃ¢n 2 sá»‘ phá»©c: (a + bi)(c + di) = (ac - bd) + (ad + bc)i
+    // Yêu cầu 2: Nhân 2 số phức: (a + bi)(c + di) = (ac - bd) + (ad + bc)i
     public SoPhuc nhan(SoPhuc sp2) {
         if (sp2 == null) return new SoPhuc(0, 0);
         double thuc = this.phanThuc * sp2.phanThuc - this.phanAo * sp2.phanAo;

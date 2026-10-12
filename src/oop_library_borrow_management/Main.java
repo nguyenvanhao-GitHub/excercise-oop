@@ -9,12 +9,12 @@ public class Main {
     public static void main(String[] args) {
         int luaChon;
         do {
-            System.out.println("\n========== QUáº¢N LÃ MÆ¯á»¢N TRáº¢ SÃCH (BÃ€I 8) ==========");
-            System.out.println("1. ThÃªm má»›i tháº» mÆ°á»£n");
-            System.out.println("2. XÃ³a tháº» mÆ°á»£n theo mÃ£ phiáº¿u mÆ°á»£n");
-            System.out.println("3. Hiá»ƒn thá»‹ thÃ´ng tin cÃ¡c tháº» mÆ°á»£n");
-            System.out.println("0. ThoÃ¡t khá»i chÆ°Æ¡ng trÃ¬nh");
-            System.out.print(">> Nháº­p lá»±a chá»n cá»§a báº¡n: ");
+            System.out.println("\n========== QUẢN LÝ MƯỢN TRẢ SÁCH (BÀI 8) ==========");
+            System.out.println("1. Thêm mới thẻ mượn");
+            System.out.println("2. Xóa thẻ mượn theo mã phiếu mượn");
+            System.out.println("3. Hiển thị thông tin các thẻ mượn");
+            System.out.println("0. Thoát khỏi chương trình");
+            System.out.print(">> Nhập lựa chọn của bạn: ");
 
             try {
                 luaChon = Integer.parseInt(scanner.nextLine().trim());
@@ -33,59 +33,59 @@ public class Main {
                     qltm.hienThiDanhSach();
                     break;
                 case 0:
-                    System.out.println("ÄÃ£ thoÃ¡t chÆ°Æ¡ng trÃ¬nh Quáº£n lÃ½ mÆ°á»£n tráº£ sÃ¡ch.");
+                    System.out.println("Đã thoát chương trình Quản lý mượn trả sách.");
                     break;
                 default:
-                    System.out.println("Lá»±a chá»n khÃ´ng há»£p lá»‡, vui lÃ²ng chá»n láº¡i!");
+                    System.out.println("Lựa chọn không hợp lệ, vui lòng chọn lại!");
             }
         } while (luaChon != 0);
     }
 
     private static void themMoiTheMuon() {
-        System.out.print("Nháº­p mÃ£ phiáº¿u mÆ°á»£n: ");
+        System.out.print("Nhập mã phiếu mượn: ");
         String maPhieu = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p há» tÃªn sinh viÃªn mÆ°á»£n sÃ¡ch: ");
+        System.out.print("Nhập họ tên sinh viên mượn sách: ");
         String hoTen = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p tuá»•i sinh viÃªn: ");
+        System.out.print("Nhập tuổi sinh viên: ");
         int tuoi;
         try {
             tuoi = Integer.parseInt(scanner.nextLine().trim());
         } catch (NumberFormatException e) {
-            System.out.println("Tuá»•i pháº£i lÃ  sá»‘ nguyÃªn!");
+            System.out.println("Tuổi phải là số nguyên!");
             return;
         }
 
-        System.out.print("Nháº­p lá»›p: ");
+        System.out.print("Nhập lớp: ");
         String lop = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p sá»‘ hiá»‡u sÃ¡ch: ");
+        System.out.print("Nhập số hiệu sách: ");
         String soHieuSach = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p ngÃ y mÆ°á»£n (sá»‘ nguyÃªn dÆ°Æ¡ng): ");
+        System.out.print("Nhập ngày mượn (số nguyên dương): ");
         int ngayMuon;
         try {
             ngayMuon = Integer.parseInt(scanner.nextLine().trim());
             if (ngayMuon <= 0) {
-                System.out.println("NgÃ y mÆ°á»£n pháº£i lÃ  sá»‘ nguyÃªn dÆ°Æ¡ng!");
+                System.out.println("Ngày mượn phải là số nguyên dương!");
                 return;
             }
         } catch (NumberFormatException e) {
-            System.out.println("NgÃ y mÆ°á»£n pháº£i lÃ  sá»‘ nguyÃªn!");
+            System.out.println("Ngày mượn phải là số nguyên!");
             return;
         }
 
-        System.out.print("Nháº­p háº¡n tráº£ (sá»‘ nguyÃªn dÆ°Æ¡ng): ");
+        System.out.print("Nhập hạn trả (số nguyên dương): ");
         int hanTra;
         try {
             hanTra = Integer.parseInt(scanner.nextLine().trim());
             if (hanTra <= 0 || hanTra < ngayMuon) {
-                System.out.println("Háº¡n tráº£ pháº£i lÃ  sá»‘ nguyÃªn dÆ°Æ¡ng vÃ  lá»›n hÆ¡n hoáº·c báº±ng ngÃ y mÆ°á»£n!");
+                System.out.println("Hạn trả phải là số nguyên dương và lớn hơn hoặc bằng ngày mượn!");
                 return;
             }
         } catch (NumberFormatException e) {
-            System.out.println("Háº¡n tráº£ pháº£i lÃ  sá»‘ nguyÃªn!");
+            System.out.println("Hạn trả phải là số nguyên!");
             return;
         }
 
@@ -94,20 +94,20 @@ public class Main {
 
         boolean thanhCong = qltm.themTheMuon(theMuon);
         if (thanhCong) {
-            System.out.println(">> ThÃªm má»›i tháº» mÆ°á»£n thÃ nh cÃ´ng!");
+            System.out.println(">> Thêm mới thẻ mượn thành công!");
         } else {
-            System.out.println(">> Tháº¥t báº¡i: MÃ£ phiáº¿u mÆ°á»£n '" + maPhieu + "' Ä‘Ã£ tá»“n táº¡i!");
+            System.out.println(">> Thất bại: Mã phiếu mượn '" + maPhieu + "' đã tồn tại!");
         }
     }
 
     private static void xoaTheMuon() {
-        System.out.print("Nháº­p mÃ£ phiáº¿u mÆ°á»£n cáº§n xÃ³a: ");
+        System.out.print("Nhập mã phiếu mượn cần xóa: ");
         String ma = scanner.nextLine().trim();
         boolean daXoa = qltm.xoaTheMuon(ma);
         if (daXoa) {
-            System.out.println(">> ÄÃ£ xÃ³a thÃ nh cÃ´ng tháº» mÆ°á»£n cÃ³ mÃ£: " + ma);
+            System.out.println(">> Đã xóa thành công thẻ mượn có mã: " + ma);
         } else {
-            System.out.println(">> KhÃ´ng tÃ¬m tháº¥y tháº» mÆ°á»£n cÃ³ mÃ£: " + ma);
+            System.out.println(">> Không tìm thấy thẻ mượn có mã: " + ma);
         }
     }
 }

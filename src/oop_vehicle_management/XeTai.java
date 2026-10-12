@@ -21,7 +21,7 @@ public class XeTai extends PhuongTien {
 
     @Override
     public String toString() {
-        return "Xe táº£i [" + super.toString() +
-                ", Trá»ng táº£i: " + trongTai + " táº¥n]";
+        return "Xe tải [" + super.toString() +
+                ", Trọng tải: " + trongTai + " tấn]";
     }
 }

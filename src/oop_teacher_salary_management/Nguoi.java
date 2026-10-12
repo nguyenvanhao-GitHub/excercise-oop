@@ -50,9 +50,9 @@ public class Nguoi {
 
     @Override
     public String toString() {
-        return "MÃ£ GV: " + maSoGV +
-                ", Há» tÃªn: " + hoTen +
-                ", Tuá»•i: " + tuoi +
-                ", QuÃª quÃ¡n: " + queQuan;
+        return "Mã GV: " + maSoGV +
+                ", Họ tên: " + hoTen +
+                ", Tuổi: " + tuoi +
+                ", Quê quán: " + queQuan;
     }
 }

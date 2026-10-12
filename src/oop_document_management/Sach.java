@@ -31,8 +31,8 @@ public class Sach extends TaiLieu {
 
     @Override
     public String toString() {
-        return "SÃ¡ch [" + super.toString() +
-                ", TÃ¡c giáº£: " + tenTacGia +
-                ", Sá»‘ trang: " + soTrang + "]";
+        return "Sách [" + super.toString() +
+                ", Tác giả: " + tenTacGia +
+                ", Số trang: " + soTrang + "]";
     }
 }

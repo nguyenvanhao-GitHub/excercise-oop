@@ -12,7 +12,7 @@ public class KhachSan {
 
     public boolean themKhachThue(KhachThue khachThue) {
         if (khachThue == null || khachThue.getNguoi() == null) return false;
-        // Kiá»ƒm tra xem khÃ¡ch cÃ³ sá»‘ CMND nÃ y Ä‘Ã£ Ä‘ang thuÃª phÃ²ng hay chÆ°a
+        // Kiểm tra xem khách có số CMND này đã đang thuê phòng hay chưa
         boolean tonTai = danhSachKhachThue.stream()
                 .anyMatch(kt -> kt.getNguoi().getSoCMND().equalsIgnoreCase(khachThue.getNguoi().getSoCMND()));
         if (tonTai) {
@@ -34,15 +34,15 @@ public class KhachSan {
                 return kt.tinhTien();
             }
         }
-        return null; // KhÃ´ng tÃ¬m tháº¥y
+        return null; // Không tìm thấy
     }
 
     public void hienThiDanhSach() {
         if (danhSachKhachThue.isEmpty()) {
-            System.out.println("Hiá»‡n táº¡i khÃ¡ch sáº¡n khÃ´ng cÃ³ khÃ¡ch Ä‘ang thuÃª phÃ²ng.");
+            System.out.println("Hiện tại khách sạn không có khách đang thuê phòng.");
             return;
         }
-        System.out.println("----- DANH SÃCH KHÃCH THUÃŠ PHÃ’NG (" + danhSachKhachThue.size() + ") -----");
+        System.out.println("----- DANH SÁCH KHÁCH THUÊ PHÒNG (" + danhSachKhachThue.size() + ") -----");
         for (int i = 0; i < danhSachKhachThue.size(); i++) {
             System.out.println((i + 1) + ". " + danhSachKhachThue.get(i));
         }

@@ -31,8 +31,8 @@ public class Oto extends PhuongTien {
 
     @Override
     public String toString() {
-        return "Ã” tÃ´ [" + super.toString() +
-                ", Sá»‘ chá»— ngá»“i: " + soChoNgoi +
-                ", Kiá»ƒu Ä‘á»™ng cÆ¡: " + kieuDongCo + "]";
+        return "Ô tô [" + super.toString() +
+                ", Số chỗ ngồi: " + soChoNgoi +
+                ", Kiểu động cơ: " + kieuDongCo + "]";
     }
 }

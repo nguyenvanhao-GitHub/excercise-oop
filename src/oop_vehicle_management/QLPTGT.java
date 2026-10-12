@@ -45,10 +45,10 @@ public class QLPTGT {
 
     public void hienThiDanhSach() {
         if (danhSachPhuongTien.isEmpty()) {
-            System.out.println("Há»‡ thá»‘ng hiá»‡n chÆ°a cÃ³ phÆ°Æ¡ng tiá»‡n nÃ o.");
+            System.out.println("Hệ thống hiện chưa có phương tiện nào.");
             return;
         }
-        System.out.println("----- DANH SÃCH PHÆ¯Æ NG TIá»†N GIAO THÃ”NG (" + danhSachPhuongTien.size() + ") -----");
+        System.out.println("----- DANH SÁCH PHƯƠNG TIỆN GIAO THÔNG (" + danhSachPhuongTien.size() + ") -----");
         for (int i = 0; i < danhSachPhuongTien.size(); i++) {
             System.out.println((i + 1) + ". " + danhSachPhuongTien.get(i));
         }

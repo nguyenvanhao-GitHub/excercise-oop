@@ -61,9 +61,9 @@ public class PhuongTien {
     @Override
     public String toString() {
         return "ID: " + id +
-                ", HÃ£ng: " + hangSanXuat +
-                ", NÄƒm SX: " + namSanXuat +
-                ", GiÃ¡ bÃ¡n: " + String.format("%,.0f", giaBan) + " VNÄ" +
-                ", MÃ u: " + mauXe;
+                ", Hãng: " + hangSanXuat +
+                ", Năm SX: " + namSanXuat +
+                ", Giá bán: " + String.format("%,.0f", giaBan) + " VNĐ" +
+                ", Màu: " + mauXe;
     }
 }

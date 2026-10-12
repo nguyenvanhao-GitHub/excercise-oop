@@ -28,10 +28,10 @@ public class QuanLyCBGV {
 
     public void hienThiDanhSach() {
         if (danhSachCBGV.isEmpty()) {
-            System.out.println("Khoa CNTT hiá»‡n chÆ°a cÃ³ há»“ sÆ¡ cÃ¡n bá»™ giÃ¡o viÃªn nÃ o.");
+            System.out.println("Khoa CNTT hiện chưa có hồ sơ cán bộ giáo viên nào.");
             return;
         }
-        System.out.println("----- DANH SÃCH CÃN Bá»˜ GIÃO VIÃŠN VÃ€ LÆ¯Æ NG (" + danhSachCBGV.size() + ") -----");
+        System.out.println("----- DANH SÁCH CÁN BỘ GIÁO VIÊN VÀ LƯƠNG (" + danhSachCBGV.size() + ") -----");
         for (int i = 0; i < danhSachCBGV.size(); i++) {
             System.out.println((i + 1) + ". " + danhSachCBGV.get(i));
         }

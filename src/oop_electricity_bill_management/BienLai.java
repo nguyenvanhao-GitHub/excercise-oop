@@ -38,7 +38,7 @@ public class BienLai {
         this.chiSoMoi = chiSoMoi;
     }
 
-    // Tiá»n Ä‘iá»‡n = (chá»‰ sá»‘ má»›i - chá»‰ sá»‘ cÅ©) * 5
+    // Tiền điện = (chỉ số mới - chỉ số cũ) * 5
     public double tinhTienDien() {
         if (chiSoMoi < chiSoCu) return 0;
         return (chiSoMoi - chiSoCu) * 5;
@@ -46,10 +46,10 @@ public class BienLai {
 
     @Override
     public String toString() {
-        return "BiÃªn lai [" + khachHang +
-                ", Chá»‰ sá»‘ cÅ©: " + chiSoCu +
-                ", Chá»‰ sá»‘ má»›i: " + chiSoMoi +
-                ", Äiá»‡n tiÃªu thá»¥: " + (chiSoMoi - chiSoCu) + " kWh" +
-                ", Sá»‘ tiá»n pháº£i tráº£: " + String.format("%,.2f", tinhTienDien()) + " VNÄ]";
+        return "Biên lai [" + khachHang +
+                ", Chỉ số cũ: " + chiSoCu +
+                ", Chỉ số mới: " + chiSoMoi +
+                ", Điện tiêu thụ: " + (chiSoMoi - chiSoCu) + " kWh" +
+                ", Số tiền phải trả: " + String.format("%,.2f", tinhTienDien()) + " VNĐ]";
     }
 }

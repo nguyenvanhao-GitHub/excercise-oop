@@ -46,9 +46,9 @@ public class CBGV extends Nguoi {
     @Override
     public String toString() {
         return "CBGV [" + super.toString() +
-                ", LÆ°Æ¡ng cá»©ng: " + String.format("%,.0f", luongCung) + " VNÄ" +
-                ", ThÆ°á»Ÿng: " + String.format("%,.0f", luongThuong) + " VNÄ" +
-                ", Pháº¡t: " + String.format("%,.0f", tienPhat) + " VNÄ" +
-                ", LÆ¯Æ NG THá»°C LÄ¨NH: " + String.format("%,.0f", getLuongThucLinh()) + " VNÄ]";
+                ", Lương cứng: " + String.format("%,.0f", luongCung) + " VNĐ" +
+                ", Thưởng: " + String.format("%,.0f", luongThuong) + " VNĐ" +
+                ", Phạt: " + String.format("%,.0f", tienPhat) + " VNĐ" +
+                ", LƯƠNG THỰC LĨNH: " + String.format("%,.0f", getLuongThucLinh()) + " VNĐ]";
     }
 }

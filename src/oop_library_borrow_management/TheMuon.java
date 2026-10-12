@@ -60,10 +60,10 @@ public class TheMuon {
 
     @Override
     public String toString() {
-        return "Tháº» mÆ°á»£n [MÃ£ phiáº¿u: " + maPhieuMuon +
-                ", NgÃ y mÆ°á»£n: ngÃ y " + ngayMuon +
-                ", Háº¡n tráº£: ngÃ y " + hanTra +
-                ", Sá»‘ hiá»‡u sÃ¡ch: " + soHieuSach +
+        return "Thẻ mượn [Mã phiếu: " + maPhieuMuon +
+                ", Ngày mượn: ngày " + ngayMuon +
+                ", Hạn trả: ngày " + hanTra +
+                ", Số hiệu sách: " + soHieuSach +
                 " | " + sinhVien + "]";
     }
 }

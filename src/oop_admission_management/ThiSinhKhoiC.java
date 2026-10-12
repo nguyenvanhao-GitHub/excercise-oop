@@ -1,7 +1,7 @@
 package oop_admission_management;
 
 public class ThiSinhKhoiC extends ThiSinh {
-    public static final String MON_THI = "VÄƒn, Sá»­, Äá»‹a";
+    public static final String MON_THI = "Văn, Sử, Địa";
 
     public ThiSinhKhoiC() {
     }
@@ -12,6 +12,6 @@ public class ThiSinhKhoiC extends ThiSinh {
 
     @Override
     public String toString() {
-        return "ThÃ­ sinh Khá»‘i C [" + super.toString() + ", MÃ´n thi: " + MON_THI + "]";
+        return "Thí sinh Khối C [" + super.toString() + ", Môn thi: " + MON_THI + "]";
     }
 }

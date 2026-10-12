@@ -10,14 +10,14 @@ public class Main {
     public static void main(String[] args) {
         int luaChon;
         do {
-            System.out.println("\n========== QUáº¢N LÃ PHÆ¯Æ NG TIá»†N GIAO THÃ”NG (BÃ€I 12) ==========");
-            System.out.println("1. ThÃªm má»›i phÆ°Æ¡ng tiá»‡n (Ã” tÃ´, Xe mÃ¡y, Xe táº£i)");
-            System.out.println("2. XÃ³a phÆ°Æ¡ng tiá»‡n theo ID");
-            System.out.println("3. TÃ¬m phÆ°Æ¡ng tiá»‡n theo hÃ£ng sáº£n xuáº¥t");
-            System.out.println("4. TÃ¬m phÆ°Æ¡ng tiá»‡n theo mÃ u xe");
-            System.out.println("5. Hiá»ƒn thá»‹ danh sÃ¡ch phÆ°Æ¡ng tiá»‡n");
-            System.out.println("0. ThoÃ¡t khá»i chÆ°Æ¡ng trÃ¬nh");
-            System.out.print(">> Nháº­p lá»±a chá»n cá»§a báº¡n: ");
+            System.out.println("\n========== QUẢN LÝ PHƯƠNG TIỆN GIAO THÔNG (BÀI 12) ==========");
+            System.out.println("1. Thêm mới phương tiện (Ô tô, Xe máy, Xe tải)");
+            System.out.println("2. Xóa phương tiện theo ID");
+            System.out.println("3. Tìm phương tiện theo hãng sản xuất");
+            System.out.println("4. Tìm phương tiện theo màu xe");
+            System.out.println("5. Hiển thị danh sách phương tiện");
+            System.out.println("0. Thoát khỏi chương trình");
+            System.out.print(">> Nhập lựa chọn của bạn: ");
 
             try {
                 luaChon = Integer.parseInt(scanner.nextLine().trim());
@@ -42,124 +42,124 @@ public class Main {
                     qlptgt.hienThiDanhSach();
                     break;
                 case 0:
-                    System.out.println("ÄÃ£ thoÃ¡t chÆ°Æ¡ng trÃ¬nh Quáº£n lÃ½ phÆ°Æ¡ng tiá»‡n giao thÃ´ng.");
+                    System.out.println("Đã thoát chương trình Quản lý phương tiện giao thông.");
                     break;
                 default:
-                    System.out.println("Lá»±a chá»n khÃ´ng há»£p lá»‡, vui lÃ²ng chá»n láº¡i!");
+                    System.out.println("Lựa chọn không hợp lệ, vui lòng chọn lại!");
             }
         } while (luaChon != 0);
     }
 
     private static void themMoiPhuongTien() {
-        System.out.println("\n--- Chá»n loáº¡i phÆ°Æ¡ng tiá»‡n ---");
-        System.out.println("1. Ã” tÃ´");
-        System.out.println("2. Xe mÃ¡y");
-        System.out.println("3. Xe táº£i");
-        System.out.print(">> Lá»±a chá»n: ");
+        System.out.println("\n--- Chọn loại phương tiện ---");
+        System.out.println("1. Ô tô");
+        System.out.println("2. Xe máy");
+        System.out.println("3. Xe tải");
+        System.out.print(">> Lựa chọn: ");
         int loai;
         try {
             loai = Integer.parseInt(scanner.nextLine().trim());
         } catch (NumberFormatException e) {
-            System.out.println("Lá»±a chá»n khÃ´ng há»£p lá»‡!");
+            System.out.println("Lựa chọn không hợp lệ!");
             return;
         }
 
-        System.out.print("Nháº­p ID phÆ°Æ¡ng tiá»‡n: ");
+        System.out.print("Nhập ID phương tiện: ");
         String id = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p hÃ£ng sáº£n xuáº¥t: ");
+        System.out.print("Nhập hãng sản xuất: ");
         String hangSX = scanner.nextLine().trim();
 
-        System.out.print("Nháº­p nÄƒm sáº£n xuáº¥t: ");
+        System.out.print("Nhập năm sản xuất: ");
         int namSX;
         try {
             namSX = Integer.parseInt(scanner.nextLine().trim());
         } catch (NumberFormatException e) {
-            System.out.println("NÄƒm sáº£n xuáº¥t pháº£i lÃ  sá»‘ nguyÃªn!");
+            System.out.println("Năm sản xuất phải là số nguyên!");
             return;
         }
 
-        System.out.print("Nháº­p giÃ¡ bÃ¡n: ");
+        System.out.print("Nhập giá bán: ");
         double giaBan;
         try {
             giaBan = Double.parseDouble(scanner.nextLine().trim());
         } catch (NumberFormatException e) {
-            System.out.println("GiÃ¡ bÃ¡n pháº£i lÃ  sá»‘!");
+            System.out.println("Giá bán phải là số!");
             return;
         }
 
-        System.out.print("Nháº­p mÃ u xe: ");
+        System.out.print("Nhập màu xe: ");
         String mauXe = scanner.nextLine().trim();
 
         PhuongTien pt;
         switch (loai) {
             case 1:
-                System.out.print("Nháº­p sá»‘ chá»— ngá»“i: ");
+                System.out.print("Nhập số chỗ ngồi: ");
                 int soCho;
                 try {
                     soCho = Integer.parseInt(scanner.nextLine().trim());
                 } catch (NumberFormatException e) {
-                    System.out.println("Sá»‘ chá»— ngá»“i pháº£i lÃ  sá»‘ nguyÃªn!");
+                    System.out.println("Số chỗ ngồi phải là số nguyên!");
                     return;
                 }
-                System.out.print("Nháº­p kiá»ƒu Ä‘á»™ng cÆ¡: ");
+                System.out.print("Nhập kiểu động cơ: ");
                 String dongCo = scanner.nextLine().trim();
                 pt = new Oto(id, hangSX, namSX, giaBan, mauXe, soCho, dongCo);
                 break;
             case 2:
-                System.out.print("Nháº­p cÃ´ng suáº¥t (HP): ");
+                System.out.print("Nhập công suất (HP): ");
                 double congSuat;
                 try {
                     congSuat = Double.parseDouble(scanner.nextLine().trim());
                 } catch (NumberFormatException e) {
-                    System.out.println("CÃ´ng suáº¥t pháº£i lÃ  sá»‘!");
+                    System.out.println("Công suất phải là số!");
                     return;
                 }
                 pt = new XeMay(id, hangSX, namSX, giaBan, mauXe, congSuat);
                 break;
             case 3:
-                System.out.print("Nháº­p trá»ng táº£i (táº¥n): ");
+                System.out.print("Nhập trọng tải (tấn): ");
                 double trongTai;
                 try {
                     trongTai = Double.parseDouble(scanner.nextLine().trim());
                 } catch (NumberFormatException e) {
-                    System.out.println("Trá»ng táº£i pháº£i lÃ  sá»‘!");
+                    System.out.println("Trọng tải phải là số!");
                     return;
                 }
                 pt = new XeTai(id, hangSX, namSX, giaBan, mauXe, trongTai);
                 break;
             default:
-                System.out.println("Loáº¡i phÆ°Æ¡ng tiá»‡n khÃ´ng há»£p lá»‡!");
+                System.out.println("Loại phương tiện không hợp lệ!");
                 return;
         }
 
         boolean thanhCong = qlptgt.themPhuongTien(pt);
         if (thanhCong) {
-            System.out.println(">> ThÃªm má»›i phÆ°Æ¡ng tiá»‡n thÃ nh cÃ´ng!");
+            System.out.println(">> Thêm mới phương tiện thành công!");
         } else {
-            System.out.println(">> Tháº¥t báº¡i: ID '" + id + "' Ä‘Ã£ tá»“n táº¡i trong há»‡ thá»‘ng!");
+            System.out.println(">> Thất bại: ID '" + id + "' đã tồn tại trong hệ thống!");
         }
     }
 
     private static void xoaPhuongTien() {
-        System.out.print("Nháº­p ID phÆ°Æ¡ng tiá»‡n cáº§n xÃ³a: ");
+        System.out.print("Nhập ID phương tiện cần xóa: ");
         String id = scanner.nextLine().trim();
         boolean daXoa = qlptgt.xoaPhuongTien(id);
         if (daXoa) {
-            System.out.println(">> ÄÃ£ xÃ³a thÃ nh cÃ´ng phÆ°Æ¡ng tiá»‡n cÃ³ ID: " + id);
+            System.out.println(">> Đã xóa thành công phương tiện có ID: " + id);
         } else {
-            System.out.println(">> KhÃ´ng tÃ¬m tháº¥y phÆ°Æ¡ng tiá»‡n cÃ³ ID: " + id);
+            System.out.println(">> Không tìm thấy phương tiện có ID: " + id);
         }
     }
 
     private static void timTheoHangSX() {
-        System.out.print("Nháº­p hÃ£ng sáº£n xuáº¥t cáº§n tÃ¬m: ");
+        System.out.print("Nhập hãng sản xuất cần tìm: ");
         String hang = scanner.nextLine().trim();
         List<PhuongTien> ketQua = qlptgt.timKiemTheoHangSanXuat(hang);
         if (ketQua.isEmpty()) {
-            System.out.println("KhÃ´ng tÃ¬m tháº¥y phÆ°Æ¡ng tiá»‡n nÃ o cá»§a hÃ£ng: " + hang);
+            System.out.println("Không tìm thấy phương tiện nào của hãng: " + hang);
         } else {
-            System.out.println("--- Káº¾T QUáº¢ TÃŒM KIáº¾M THEO HÃƒNG (" + ketQua.size() + ") ---");
+            System.out.println("--- KẾT QUẢ TÌM KIẾM THEO HÃNG (" + ketQua.size() + ") ---");
             for (PhuongTien p : ketQua) {
                 System.out.println(p);
             }
@@ -167,13 +167,13 @@ public class Main {
     }
 
     private static void timTheoMauXe() {
-        System.out.print("Nháº­p mÃ u xe cáº§n tÃ¬m: ");
+        System.out.print("Nhập màu xe cần tìm: ");
         String mau = scanner.nextLine().trim();
         List<PhuongTien> ketQua = qlptgt.timKiemTheoMau(mau);
         if (ketQua.isEmpty()) {
-            System.out.println("KhÃ´ng tÃ¬m tháº¥y phÆ°Æ¡ng tiá»‡n nÃ o cÃ³ mÃ u: " + mau);
+            System.out.println("Không tìm thấy phương tiện nào có màu: " + mau);
         } else {
-            System.out.println("--- Káº¾T QUáº¢ TÃŒM KIáº¾M THEO MÃ€U (" + ketQua.size() + ") ---");
+            System.out.println("--- KẾT QUẢ TÌM KIẾM THEO MÀU (" + ketQua.size() + ") ---");
             for (PhuongTien p : ketQua) {
                 System.out.println(p);
             }

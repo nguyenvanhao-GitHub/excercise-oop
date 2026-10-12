@@ -3,7 +3,7 @@ package oop_electricity_bill_management;
 public class KhachHang {
     private String hoTenChuHo;
     private String soNha;
-    private String maSoCongTo; // Duy nháº¥t
+    private String maSoCongTo; // Duy nhất
 
     public KhachHang() {
     }
@@ -40,8 +40,8 @@ public class KhachHang {
 
     @Override
     public String toString() {
-        return "MÃ£ cÃ´ng tÆ¡: " + maSoCongTo +
-                ", Chá»§ há»™: " + hoTenChuHo +
-                ", Sá»‘ nhÃ : " + soNha;
+        return "Mã công tơ: " + maSoCongTo +
+                ", Chủ hộ: " + hoTenChuHo +
+                ", Số nhà: " + soNha;
     }
 }

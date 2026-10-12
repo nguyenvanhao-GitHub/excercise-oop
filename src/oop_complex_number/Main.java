@@ -6,27 +6,27 @@ public class Main {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("========== CHÆ¯Æ NG TRÃŒNH Sá» PHá»¨C (BÃ€I 11) ==========");
+        System.out.println("========== CHƯƠNG TRÌNH SỐ PHỨC (BÀI 11) ==========");
 
         SoPhuc sp1 = new SoPhuc();
-        System.out.println("Nháº­p sá»‘ phá»©c thá»© nháº¥t:");
+        System.out.println("Nhập số phức thứ nhất:");
         sp1.nhap(scanner);
 
         SoPhuc sp2 = new SoPhuc();
-        System.out.println("Nháº­p sá»‘ phá»©c thá»© hai:");
+        System.out.println("Nhập số phức thứ hai:");
         sp2.nhap(scanner);
 
-        System.out.println("\n--- CÃC Sá» PHá»¨C Vá»ªA NHáº¬P ---");
-        System.out.print("Sá»‘ phá»©c 1: ");
+        System.out.println("\n--- CÁC SỐ PHỨC VỪA NHẬP ---");
+        System.out.print("Số phức 1: ");
         sp1.hienThi();
-        System.out.print("Sá»‘ phá»©c 2: ");
+        System.out.print("Số phức 2: ");
         sp2.hienThi();
 
-        System.out.println("\n--- Káº¾T QUáº¢ PHÃ‰P TOÃN ---");
+        System.out.println("\n--- KẾT QUẢ PHÉP TOÁN ---");
         SoPhuc tong = sp1.cong(sp2);
-        System.out.println("Tá»•ng (sp1 + sp2) = " + tong);
+        System.out.println("Tổng (sp1 + sp2) = " + tong);
 
         SoPhuc tich = sp1.nhan(sp2);
-        System.out.println("TÃ­ch (sp1 * sp2) = " + tich);
+        System.out.println("Tích (sp1 * sp2) = " + tich);
     }
 }
